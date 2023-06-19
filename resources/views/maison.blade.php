@@ -24,41 +24,16 @@
     <div class="ltn__img-slider-area mb-90">
         <div class="container-fluid">
             <div class="row ltn__image-slider-5-active slick-arrow-1 slick-arrow-1-inner ltn__no-gutter-all">
-                <div class="col-lg-12">
-                    <div class="ltn__img-slide-item-4">
-                        <a href="img/img-slide/31.jpg" data-rel="lightcase:myCollection">
-                            <img src="img/img-slide/31.jpg" alt="Image">
-                        </a>
+                
+                @foreach ($maison_images as $image)
+                    <div class="col-lg-12">
+                        <div class="ltn__img-slide-item-4">
+                            <a href="{{ asset('storage/' . $image->lien) }}" data-rel="lightcase:myCollection">
+                                <img src="{{ asset('storage/' . $image->lien) }}" style="width:100%" alt="Image">
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="ltn__img-slide-item-4">
-                        <a href="img/img-slide/32.jpg" data-rel="lightcase:myCollection">
-                            <img src="img/img-slide/32.jpg" alt="Image">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="ltn__img-slide-item-4">
-                        <a href="img/img-slide/33.jpg" data-rel="lightcase:myCollection">
-                            <img src="img/img-slide/33.jpg" alt="Image">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="ltn__img-slide-item-4">
-                        <a href="img/img-slide/34.jpg" data-rel="lightcase:myCollection">
-                            <img src="img/img-slide/34.jpg" alt="Image">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="ltn__img-slide-item-4">
-                        <a href="img/img-slide/35.jpg" data-rel="lightcase:myCollection">
-                            <img src="img/img-slide/35.jpg" alt="Image">
-                        </a>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
@@ -72,36 +47,31 @@
                     <div class="ltn__shop-details-inner ltn__page-details-inner mb-60">
                         <div class="ltn__blog-meta">
                             <ul>
-                                <li class="ltn__blog-category">
-                                    <a class="bg-orange" href="#">For Rent</a>
-                                </li>
+                                @if ($maison->prix_vende)
+                                    <li class="sale-badge bg-green px-1 rounded-3 f-size-2">For SALE</li>
+                                @endif
+                                @if ($maison->prix_louer_moin)
+                                    <li class="sale-badge bg-green px-1 rounded-3 f-size-2">For RENT month</li>
+                                @endif
+                                @if ($maison->prix_louer_jour)
+                                    <li class="sale-badge bg-green px-1 rounded-3 f-size-2">For RENT day</li>
+                                @endif
                             </ul>
                         </div>
-                        <h1>Diamond Manor Apartment</h1>
-                        <label><span class="ltn__secondary-color"><i class="flaticon-pin"></i></span> morocco, <span class="text-uppercase">moulay bousselham </span></label>
+                        <h1>{{$maison->titre}}</h1>
                         <h4 class="title-2">Description</h4>
-                        <p>Massa tempor nec feugiat nisl pretium. Egestas fringilla phasellus faucibus scelerisque eleifend donec
-                            Porta nibh venenatis cras sed felis eget velit aliquet. Neque volutpat ac tincidunt vitae semper
-                            quis lectus. Turpis in eu mi bibendum neque egestas congue quisque. Sed elementum tempus egestas
-                            sed sed risus pretium quam. Dignissim sodales ut eu sem. Nibh mauris cursus mattis molestee
-                            iaculis at erat pellentesque. Id interdum velit laoreet id donec ultrices tincidunt.</p>
-                        <p>To the left is the modern kitchen with central island, leading through to the unique breakfast family room which feature glass walls and doors out onto the garden and access to the separate utility room.</p>
+                        <p>{{$maison->description}}</p>
 
                         <h4 class="title-2">From Our Gallery</h4>
                         <div class="ltn__property-details-gallery mb-30">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <a href="img/others/14.jpg" data-rel="lightcase:myCollection">
-                                        <img class="mb-30" src="img/others/14.jpg" alt="Image">
+                                    
+                                    @foreach ($maison_images as $image)
+                                    <a href="{{ asset('storage/' . $image->lien) }}" data-rel="lightcase:myCollection">
+                                        <img class="mb-30" src="{{ asset('storage/' . $image->lien) }}" alt="Image">
                                     </a>
-                                    <a href="img/others/15.jpg" data-rel="lightcase:myCollection">
-                                        <img class="mb-30" src="img/others/15.jpg" alt="Image">
-                                    </a>
-                                </div>
-                                <div class="col-md-6">
-                                    <a href="img/others/16.jpg" data-rel="lightcase:myCollection">
-                                        <img class="mb-30" src="img/others/16.jpg" alt="Image">
-                                    </a>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
@@ -113,7 +83,7 @@
                             <div class="col-xl-6 col-sm-6 col-12">
                                 <div class="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
                                     <div class="product-img">
-                                        <a href="product-details.html"><img src="img/product-3/1.jpg" alt="#"></a>
+                                        <a href="product-details.html"><img src="/img/product-3/1.jpg" alt="#"></a>
                                         
                                     </div>
                                     <div class="product-info">
@@ -163,7 +133,7 @@
                             <div class="col-xl-6 col-sm-6 col-12">
                                 <div class="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
                                     <div class="product-img">
-                                        <a href="product-details.html"><img src="img/product-3/2.jpg" alt="#"></a>
+                                        <a href="product-details.html"><img src="/img/product-3/2.jpg" alt="#"></a>
                                        
                                     </div>
                                     <div class="product-info">
@@ -235,7 +205,7 @@
                                 <div class="col-12">
                                     <div class="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
                                         <div class="product-img">
-                                            <a href="product-details.html"><img src="img/product-3/6.jpg" alt="#"></a>
+                                            <a href="product-details.html"><img src="/img/product-3/6.jpg" alt="#"></a>
                                         </div>
                                         <div class="product-info">
                                             <div class="product-price">
@@ -267,7 +237,7 @@
                                 <div class="col-12">
                                     <div class="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
                                         <div class="product-img">
-                                            <a href="product-details.html"><img src="img/product-3/4.jpg" alt="#"></a>
+                                            <a href="product-details.html"><img src="/img/product-3/4.jpg" alt="#"></a>
                                         </div>
                                         <div class="product-info">
                                             <div class="product-price">
@@ -299,7 +269,7 @@
                                 <div class="col-12">
                                     <div class="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
                                         <div class="product-img">
-                                            <a href="product-details.html"><img src="img/product-3/5.jpg" alt="#"></a>
+                                            <a href="product-details.html"><img src="/img/product-3/5.jpg" alt="#"></a>
                                         </div>
                                         <div class="product-info">
                                             <div class="product-price">
@@ -332,7 +302,7 @@
                         </div>
                         <!-- Banner Widget -->
                         <div class="widget ltn__banner-widget d-none">
-                            <a href="shop.html"><img src="img/banner/2.jpg" alt="#"></a>
+                            <a href="shop.html"><img src="/img/banner/2.jpg" alt="#"></a>
                         </div>
                     </aside>
                 </div>
@@ -356,7 +326,7 @@
                 <div class="col-xl-6 col-sm-6 col-12">
                     <div class="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
                         <div class="product-img">
-                            <a href="product-details.html"><img src="img/product-3/1.jpg" alt="#"></a>
+                            <a href="product-details.html"><img src="/img/product-3/1.jpg" alt="#"></a>
                         </div>
                         <div class="product-info">
                             <div class="product-badge">
@@ -413,10 +383,10 @@
                 <div class="col-xl-6 col-sm-6 col-12">
                     <div class="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
                         <div class="product-img">
-                            <a href="product-details.html"><img src="img/product-3/2.jpg" alt="#"></a>
+                            <a href="product-details.html"><img src="/img/product-3/2.jpg" alt="#"></a>
                             <div class="real-estate-agent">
                                 <div class="agent-img">
-                                    <a href="team-details.html"><img src="img/blog/author.jpg" alt="#"></a>
+                                    <a href="team-details.html"><img src="/img/blog/author.jpg" alt="#"></a>
                                 </div>
                             </div>
                         </div>
@@ -475,10 +445,10 @@
                 <div class="col-xl-6 col-sm-6 col-12">
                     <div class="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
                         <div class="product-img">
-                            <a href="product-details.html"><img src="img/product-3/3.jpg" alt="#"></a>
+                            <a href="product-details.html"><img src="/img/product-3/3.jpg" alt="#"></a>
                             <div class="real-estate-agent">
                                 <div class="agent-img">
-                                    <a href="team-details.html"><img src="img/blog/author.jpg" alt="#"></a>
+                                    <a href="team-details.html"><img src="/img/blog/author.jpg" alt="#"></a>
                                 </div>
                             </div>
                         </div>
@@ -537,10 +507,10 @@
                 <div class="col-xl-6 col-sm-6 col-12">
                     <div class="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
                         <div class="product-img">
-                            <a href="product-details.html"><img src="img/product-3/4.jpg" alt="#"></a>
+                            <a href="product-details.html"><img src="/img/product-3/4.jpg" alt="#"></a>
                             <div class="real-estate-agent">
                                 <div class="agent-img">
-                                    <a href="team-details.html"><img src="img/blog/author.jpg" alt="#"></a>
+                                    <a href="team-details.html"><img src="/img/blog/author.jpg" alt="#"></a>
                                 </div>
                             </div>
                         </div>
@@ -599,10 +569,10 @@
                 <div class="col-xl-6 col-sm-6 col-12">
                     <div class="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
                         <div class="product-img">
-                            <a href="product-details.html"><img src="img/product-3/5.jpg" alt="#"></a>
+                            <a href="product-details.html"><img src="/img/product-3/5.jpg" alt="#"></a>
                             <div class="real-estate-agent">
                                 <div class="agent-img">
-                                    <a href="team-details.html"><img src="img/blog/author.jpg" alt="#"></a>
+                                    <a href="team-details.html"><img src="/img/blog/author.jpg" alt="#"></a>
                                 </div>
                             </div>
                         </div>

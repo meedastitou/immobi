@@ -84,7 +84,7 @@
                         <div class="col">
                             <div class="site-logo-wrap">
                                 <div class="site-logo">
-                                    <a href="/"><img src="img/badre-logo.png" class="logo" alt="Logo"></a>
+                                    <a href="/"><img src="/img/badre-logo.png" class="logo" alt="Logo"></a>
                                 </div>
                             </div>
                         </div>

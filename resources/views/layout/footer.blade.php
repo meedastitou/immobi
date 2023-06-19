@@ -9,7 +9,7 @@
                     <div class="footer-widget footer-about-widget">
                         <div class="footer-logo row justify-content-center mb-4">
                             <div class="site-logo col-xl-8">
-                                <img src="img/logo-badree.png" class="bg-light rounded-circle" alt="Logo">
+                                <img src="/img/logo-badree.png" class="bg-light rounded-circle" alt="Logo">
                                
                             </div>
                             <p >Bienvenue chez IMMOBILIER Moulay-Bousselham,
@@ -120,7 +120,7 @@
                             <div class="row">
                                 <div class="col-lg-6 col-12">
                                     <div class="modal-product-img">
-                                        <img src="img/product/4.png" alt="#">
+                                        <img src="/img/product/4.png" alt="#">
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-12">
@@ -185,7 +185,7 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="modal-product-img">
-                                        <img src="img/product/1.png" alt="#">
+                                        <img src="/img/product/1.png" alt="#">
                                     </div>
                                     <div class="modal-product-info">
                                         <h5><a href="product-details.html">3 Rooms Manhattan</a></h5>
@@ -203,7 +203,7 @@
                                         <p>We want to give you <b>10% discount</b> for your first order, <br>
                                             Use discount code at checkout</p>
                                         <div class="payment-method">
-                                            <img src="img/icons/payment.png" alt="#">
+                                            <img src="/img/icons/payment.png" alt="#">
                                         </div>
                                     </div>
                                 </div>
@@ -233,7 +233,7 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="modal-product-img">
-                                        <img src="img/product/7.png" alt="#">
+                                        <img src="/img/product/7.png" alt="#">
                                     </div>
                                     <div class="modal-product-info">
                                         <h5><a href="product-details.html">3 Rooms Manhattan</a></h5>

@@ -114,10 +114,10 @@
                                     <div class="col-lg-4 col-sm-6 col-12 mb-3">
                                         <div class="product-hover ltn__product-item-4 ltn__product-item-5 text-center--- products-items ">
                                             <div class="product-img">
-                                                <a href="maison/">
+                                                <a href="/public/maison/{{$maison->id}}">
                                                     <img alt="#"
                                                         @if ($maison->capt)
-                                                            src=" {{ asset('storage/' . $maison->capt) }}"
+                                                            src="{{ asset('storage/' . $maison->capt) }}"
                                                         @else
                                                             src=" {{ asset('storage/1946488.png') }} "
                                                         @endif >
