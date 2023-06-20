@@ -10,7 +10,7 @@
                         <h1 class="page-title">Shop Grid</h1>
                         <div class="ltn__breadcrumb-list">
                             <ul>
-                                <li><a href="index.html"><span class="ltn__secondary-color"><i class="fas fa-home"></i></span>
+                                <li><a href="/"><span class="ltn__secondary-color"><i class="fas fa-home"></i></span>
                                         Home</a></li>
                                 <li>Shop Grid</li>
                             </ul>
@@ -75,9 +75,11 @@
                         <div
                             class="ltn__car-dealer-form-item ltn__custom-icon---- ltn__icon-calendar---- col-lg-4 col-md-6">
                             <select class="nice-select" name="sorting">
-                                <option>Default sorting</option>
+                                <option disabled>Default sorting</option>
                                 <!-- <option>Sort by popularity</option> -->
-                                <option>Sort by new arrivals</option>
+                                <option value="arrivals" @if (request()->get('sorting') == 'arrivals')
+                                    @selected(true)
+                                @endif>Sort by new arrivals</option>
                                 <option value="price_low" @if (request()->get('sorting') == 'price_low')
                                     @selected(true)
                                 @endif>Sort by price: low to high</option>
@@ -139,7 +141,7 @@
                                                         @endif
                                                     </ul>
                                                 </div>
-                                                <h2 class="product-title"><a href="product-details.html">{{ Str::limit($maison->titre, 20) }}</a></h2>
+                                                <h2 class="product-title"><a href="/public/maison/{{$maison->id}}">{{ Str::limit($maison->titre, 20) }}</a></h2>
 
                                                 <ul class="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief m-0 mb-1">
                                                     <li class="m-0"><span>{{ $maison->nb_chambre }}</span>
@@ -157,13 +159,13 @@
                                             <div class="product-info-bottom pt-0 pb-0">
                                                 <div class="product-price">
                                                     @if ($maison->prix_vende)
-                                                        <span>{{$maison->prix_vende}}<label>/Vende</label></span>
+                                                        <span>{{$maison->prix_vende}}<label> DH /Vende</label></span>
                                                     @endif
                                                     @if ($maison->prix_louer_moin)
-                                                        <span>{{$maison->prix_louer_moin}}<label>/Month</label></span>
+                                                        <span>{{$maison->prix_louer_moin}}<label> DH /Month</label></span>
                                                     @endif
                                                     @if ($maison->prix_louer_jour)
-                                                        <span>{{$maison->prix_louer_jour}}<label>/Jour</label></span>
+                                                        <span>{{$maison->prix_louer_jour}}<label> DH /Jour</label></span>
                                                     @endif
                                                 </div>
                                             </div>

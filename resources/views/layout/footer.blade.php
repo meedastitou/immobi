@@ -26,7 +26,7 @@
                         <div class="footer-menu">
                             <ul>
                                 <li><a href="/">home</a></li>
-                                <li><a href="{{ route('contact.afficherAbout') }}">About</a></li>
+                                <li><a href="{{ route('about.afficherAbout') }}">About</a></li>
                                 <li><a href="{{ route('maisons.allMaisons') }}">All Products</a></li>
                                 <li><a href="{{route('contact.afficherContact')}}">Contact us</a></li>
                             </ul>

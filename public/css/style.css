@@ -19418,6 +19418,41 @@ input.cart-plus-minus-box {
   justify-content: space-around;
 
 }
+.product-price{
+  color: #000 !important;
+  font-weight: bold;
+}
 
+ul.pagination li{
+  margin: 0 2px;
+}
+ul.pagination li .page-link{
+  border-radius: 100%;
+}
+ul.pagination li:first-child .page-link{
+  border-radius: 100%;
+  padding: 5px 15px;
+
+}
+ul.pagination li:last-child .page-link{
+  border-radius: 100%;
+  padding: 5px 15px;
+}
+ul.pagination li a{
+  color: var(--ltn__secondary-color);
+  border-color: var(--ltn__secondary-color);
+}
+ul.pagination li:first-child a{
+  background-color: var(--ltn__secondary-color);
+  color: #fff;
+}
+ul.pagination li:last-child a{
+  background-color: var(--ltn__secondary-color);
+  color: #fff;
+}
+.page-item.active .page-link{
+  background-color: var(--ltn__secondary-color);
+  border-color: var(--ltn__secondary-color);
+}
 
 

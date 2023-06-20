@@ -29,8 +29,11 @@
                                         <tr>
                                             <td>{{ $maison->titre }}</td>
                                             <td>
+                                               @isset($vendeurs[$maison->owner])
                                                 <a class="text-decoration-none text-dark" href="{{ route('detailsVendeur.details', $maison->owner) }}">{{ $vendeurs[$maison->owner] }}
                                                 </a>
+                                                   
+                                               @endempty
                                             </td>
                                             
                                             <td><label

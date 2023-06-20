@@ -28,54 +28,7 @@
 
         <!-- HEADER AREA START (header-5) -->
         <header class="ltn__header-area ltn__header-5 ltn__header-transparent--- gradient-color-4---">
-            <!-- ltn__header-top-area start -->
-            <div class="ltn__header-top-area section-bg-6 top-area-color-white---">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-7">
-                            <div class="ltn__top-bar-menu">
-                                <ul>
-                                    <li><a href="mailto:info@webmail.com?Subject=Flower%20greetings%20to%20you"><i
-                                                class="icon-mail"></i> info@webmail.com</a></li>
-                                    <li><a href="locations.html"><i class="icon-placeholder"></i> 15/A, Nest Tower,
-                                            NYC</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-5">
-                            <div class="top-bar-right text-end">
-                                <div class="ltn__top-bar-menu">
-                                    <ul>
-                                        <li>
-                                            <!-- ltn__social-media -->
-                                            <div class="ltn__social-media">
-                                                <ul>
-                                                    <li><a href="#" title="Facebook"><i
-                                                                class="fab fa-facebook-f"></i></a></li>
-                                                    <li><a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
-                                                    </li>
-
-                                                    <li><a href="#" title="Instagram"><i
-                                                                class="fab fa-instagram"></i></a></li>
-                                                    <li><a href="#" title="Dribbble"><i class="fab fa-dribbble"></i></a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <!-- header-top-btn -->
-                                            <div class="header-top-btn">
-                                                <a href="add-listing.html">Add Listing</a>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ltn__header-top-area end -->
+           
 
             <!-- ltn__header-middle-area start -->
             <div class="ltn__header-middle-area ltn__header-sticky ltn__sticky-bg-white">
@@ -110,11 +63,11 @@
                                                     <li><a href="{{route('maisons.allMaisons', ['categorie'=>'sale', 'sorting'=>'price_hight'] )}}" >Houses for Buy</a></li>
                                                 </ul>
                                             </li>
-                                            <li class=""><a href="index.html">Activities</a>
+                                            <li class=""><a href="{{ route("activites.afficherActivites")}}">Activities</a>
                                             </li>
-                                            <li class=""><a href="/about">About</a>
+                                            <li class=""><a href="{{ route("about.afficherAbout")}}">About</a>
                                             </li>
-                                            <li><a href="/contact">Contact</a>
+                                            <li><a href="{{ route("contact.afficherContact")}}">Contact</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -194,9 +147,9 @@
                                 <li><a href="shop-left-sidebar.html">Houses for Buy</a></li>
                             </ul>
                         </li>
-                        <li class=""><a href="index.html">Activities</a>
+                        <li class=""><a href="{{ route("activites.afficherActivites")}}">Activities</a>
                         </li>
-                        <li><a href="{{ route("contact.afficherAbout")}}">About</a></li>
+                        <li><a href="{{ route("about.afficherAbout")}}">About</a></li>
 
                         <li><a href="{{ route("contact.afficherContact")}}">Contact</a></li>
                     </ul>

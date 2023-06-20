@@ -37,9 +37,12 @@ Route::get('/home', function () {
     return view('index');
 });
 
-Route::get("/contact", [PublicController::class, 'afficherContact'])->name('contact.afficherContact');
-Route::get("/about", [PublicController::class, 'afficherAbout'])->name('contact.afficherAbout');
+Route::get("/", [PublicController::class, 'index']);
+Route::get("/home", [PublicController::class, 'index']);
 
+Route::get("/contact", [PublicController::class, 'afficherContact'])->name('contact.afficherContact');
+Route::get("/about", [PublicController::class, 'afficherAbout'])->name('about.afficherAbout');
+Route::get("/activites", [PublicController::class, 'afficherActivites'])->name("activites.afficherActivites");
 
 /*
  ====================================

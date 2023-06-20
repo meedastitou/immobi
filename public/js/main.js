@@ -648,8 +648,8 @@
             speed: 300,
             slidesToShow: 4,
             slidesToScroll: 1,
-            prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i>adfw</a>',
-            nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i>aefwafwe</a>',
+            prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
+            nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
             responsive: [
                 {
                     breakpoint: 1800,
