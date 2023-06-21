@@ -19428,15 +19428,24 @@ ul.pagination li{
 }
 ul.pagination li .page-link{
   border-radius: 100%;
+  padding: 2px 14px;
+}
+ul.pagination li .page-link:hover{
+  color: var(--ltn__secondary-color);
+  border-color: var(--ltn__secondary-color);
+}
+ul.pagination li.active .page-link:hover {
+  color: #fff;
+  border-color: var(--ltn__secondary-color);
 }
 ul.pagination li:first-child .page-link{
   border-radius: 100%;
-  padding: 5px 15px;
+  padding: 2px 14px;
 
 }
 ul.pagination li:last-child .page-link{
   border-radius: 100%;
-  padding: 5px 15px;
+  padding: 2px 14px;
 }
 ul.pagination li a{
   color: var(--ltn__secondary-color);

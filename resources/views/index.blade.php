@@ -164,35 +164,34 @@
                     <div class="about-us-info-wrap">
                         <div class="section-title-area ltn__section-title-2--- mb-20">
                             <h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">About Us</h6>
-                            <h1 class="section-title">The Leading Real Estate
-                                Rental Marketplace<span>.</span></h1>
-                            <p>Over 39,000 people work for us in more than 70 countries all over the
-                                This breadth of global coverage, combined with specialist services</p>
+                            <h1 class="section-title">Le leader du marché de la location immobilière.<span>.</span></h1>
+                            <p>Plus de 39 000 personnes travaillent pour nous dans plus de 70 pays à travers le monde Cette étendue de couverture mondiale,
+                                 associée à des services spécialisés</p>
                         </div>
                         <ul class="ltn__list-item-half clearfix">
                             <li>
                                 <i class="flaticon-home-2"></i>
-                                Smart Home Design
+                                Conception de maison intelligente
                             </li>
                             <li>
                                 <i class="flaticon-mountain"></i>
-                                Beautiful Scene Around
+                                Belle scène autour
                             </li>
                             <li>
                                 <i class="flaticon-heart"></i>
-                                Exceptional Lifestyle
+                                Style de vie exceptionnel
                             </li>
                             <li>
                                 <i class="flaticon-secure"></i>
-                                Complete 24/7 Security
+                                Sécurité complète 24h/24 et 7j/7
                             </li>
                         </ul>
                         <div class="ltn__callout bg-overlay-theme-05  mt-30">
-                            <p>"Enimad minim veniam quis nostrud exercitation <br>
-                                llamco laboris. Lorem ipsum dolor sit amet" </p>
+                            <p>"Enimad minim veniam quis nostrud exercitation llamco laboris.<br>
+                                 Lorem ipsum dolor sit amet" </p>
                         </div>
                         <div class="btn-wrapper animated">
-                            <a href="service.html" class="theme-btn-1 btn btn-effect-1">OUR SERVICES</a>
+                            <a href="{{ route("about.afficherAbout") }}" class="theme-btn-1 btn btn-effect-1">NOS SERVICES</a>
                         </div>
                     </div>
                 </div>
@@ -207,7 +206,7 @@
                 <div class="col-lg-12">
                     <div class="section-title-area ltn__section-title-2--- text-center">
                         <h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">Properties</h6>
-                        <h1 class="section-title">Featured Listings</h1>
+                        <h1 class="section-title">Annonces en vedette</h1>
                     </div>
                 </div>
             </div>
@@ -226,13 +225,13 @@
                                 <div class="product-badge">
                                     <ul>
                                         @if ($maison->prix_vende)
-                                            <li class="sale-badge bg-green px-1 rounded-3 f-size-2">For SALE</li>
+                                            <li class="sale-badge bg-green px-1 rounded-3 f-size-2">À vendre</li>
                                         @endif
                                         @if ($maison->prix_louer_moin)
-                                            <li class="sale-badge bg-green px-1 rounded-3 f-size-2">For RENT month</li>
+                                            <li class="sale-badge bg-green px-1 rounded-3 f-size-2">À LOUER mois</li>
                                         @endif
                                         @if ($maison->prix_louer_jour)
-                                            <li class="sale-badge bg-green px-1 rounded-3 f-size-2">For RENT day</li>
+                                            <li class="sale-badge bg-green px-1 rounded-3 f-size-2">À LOUER jour</li>
                                         @endif
                                     </ul>
                                 </div>
@@ -242,10 +241,15 @@
                                 <div class="product-price">
                                     <div class="d-flex justify-content-between">
                                         <div>
-                                            <span>$34,900<label>/Month</label></span>
-                                            <span class="text-black-50">&&</span>
-
-                                            <span>$34,0<label>/day</label></span><br>
+                                            @if ($maison->prix_vende)
+                                            <span>{{$maison->prix_vende}}<label> DH /Vende</label></span>
+                                            @endif
+                                            @if ($maison->prix_louer_moin)
+                                                <span>{{$maison->prix_louer_moin}}<label> DH /Moins</label></span>
+                                            @endif
+                                            @if ($maison->prix_louer_jour)
+                                                <span>{{$maison->prix_louer_jour}}<label> DH /Jour</label></span>
+                                            @endif
                                         </div>
                                     </div>
                                 </div>
@@ -256,14 +260,14 @@
                                 </div>
                                 <ul class="ltn__list-item-2 ltn__list-item-2-before">
                                     <li><span>{{ $maison->nb_chambre }} <i class="flaticon-bed"></i></span>
-                                        Bedrooms
+                                        Chambres
                                     </li>
                                     <li><span>{{ $maison->nb_douche }} <i class="flaticon-clean"></i></span>
-                                        Bathrooms
+                                        Salles de bain
                                     </li>
                                     <li><span>{{{$maison->surface_maison}}} <i
                                                 class="flaticon-square-shape-design-interface-tool-symbol"></i></span>
-                                        square Ft
+                                        Surface de Maison
                                     </li>
                                     <li>
                                     </li>
@@ -279,12 +283,13 @@
     </div>
     <!-- PRODUCT SLIDER AREA END -->
     <!-- CATEGORY AREA START -->
-    <div class="ltn__category-area section-bg-1-- ltn__primary-bg before-bg-1 bg-image bg-overlay-theme-black-5--0 pt-115 pb-90">
+    <div class="ltn__category-area section-bg-1-- ltn__primary-bg before-bg-1 bg-image bg-overlay-theme-black-5--0 pt-115 pb-90"
+    data-bs-bg="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pralognan.com%2Factivites%2Factivites-ete%2F&psig=AOvVaw2cZX_zhAcugPgyWL75A5ac&ust=1687431691461000&source=images&cd=vfe&ved=0CA4QjRxqFwoTCIjwgYib1P8CFQAAAAAdAAAAABAE">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title-area ltn__section-title-2 text-center">
-                        <h1 class="section-title white-color">Les Activités a Faire ...</h1>
+                        <h1 class="section-title white-color">Les Activités à Faire ...</h1>
                     </div>
                 </div>
             </div>
@@ -391,8 +396,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title-area ltn__section-title-2--- text-center">
-                        <h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">Our Services</h6>
-                        <h1 class="section-title">Our Main Focus</h1>
+                        <h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">NOS Services</h6>
+                        <h1 class="section-title">Notre objectif principal</h1>
                     </div>
                 </div>
             </div>
@@ -404,10 +409,10 @@
                             <img src="img/icons/icon-img/21.png" alt="#">
                         </div>
                         <div class="ltn__feature-info">
-                            <h3><a href="service-details.html">Buy a home</a></h3>
+                            <h3><a href="#">Buy a home</a></h3>
                             <p>over 1 million+ homes for sale available on the website, we can match you with a
                                 house you will want to call home.</p>
-                            <a class="ltn__service-btn" href="service-details.html">Find A Home <i
+                            <a class="ltn__service-btn" href="{{route("maisons.allMaisons")}}" >Find A Home <i
                                     class="flaticon-right-arrow"></i></a>
                         </div>
                     </div>
@@ -419,10 +424,10 @@
                             <img src="img/icons/icon-img/22.png" alt="#">
                         </div>
                         <div class="ltn__feature-info">
-                            <h3><a href="service-details.html">Rent a home</a></h3>
+                            <h3><a href="#">Rent a home</a></h3>
                             <p>over 1 million+ homes for sale available on the website, we can match you with a
                                 house you will want to call home.</p>
-                            <a class="ltn__service-btn" href="service-details.html">Find A Home <i
+                            <a class="ltn__service-btn" href="{{route("maisons.allMaisons")}}">Find A Home <i
                                     class="flaticon-right-arrow"></i></a>
                         </div>
                     </div>
@@ -434,10 +439,10 @@
                             <img src="img/icons/icon-img/23.png" alt="#">
                         </div>
                         <div class="ltn__feature-info">
-                            <h3><a href="service-details.html">Sell a home</a></h3>
+                            <h3><a href="#">Sell a home</a></h3>
                             <p>over 1 million+ homes for sale available on the website, we can match you with a
                                 house you will want to call home.</p>
-                            <a class="ltn__service-btn" href="service-details.html">Find A Home <i
+                            <a class="ltn__service-btn" href="{{route("maisons.allMaisons")}}">Find A Home <i
                                     class="flaticon-right-arrow"></i></a>
                         </div>
                     </div>
@@ -494,11 +499,11 @@
                     <div
                         class="call-to-action-inner call-to-action-inner-6 ltn__secondary-bg position-relative text-center---">
                         <div class="coll-to-info text-color-white">
-                            <h1>Looking for a dream home?</h1>
-                            <p>We can help you realize your dream of a new home</p>
+                            <h1>A la recherche d'une maison de rêve?</h1>
+                            <p>Nous pouvons vous aider à réaliser votre rêve d'une nouvelle maison</p>
                         </div>
                         <div class="btn-wrapper">
-                            <a class="btn btn-effect-3 btn-white" href="{{route('contact.afficherContact')}}">Explore Properties <i
+                            <a class="btn btn-effect-3 btn-white" href="{{route('contact.afficherContact')}}">Explorer les propriétés <i
                                     class="icon-next"></i></a>
                         </div>
                     </div>

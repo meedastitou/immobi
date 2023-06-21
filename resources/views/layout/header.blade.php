@@ -46,23 +46,24 @@
                                 <nav>
                                     <div class="ltn__main-menu">
                                         <ul>
-                                            <li class=""><a href="/">Home</a>
+                                            <li class=""><a href="/">Accuell</a>
                                             </li>
-                                            <li class="menu-icon"><a href="{{route('maisons.allMaisons')}}">Houses </a>
+                                            <li class="menu-icon"><a href="{{route('maisons.allMaisons')}}">Maisons </a>
                                                 <ul>
-                                                    <li><a href="shop.html">Houses for Rent<span class="float-end">>></span></a>
+                                                    <li><a href="#">maison  à louer<span class="float-end">>></span></a>
                                                         <ul>
                                                             <li>
-                                                                <a href="{{route('maisons.allMaisons', ['categorie'=>'rent_day', 'sorting'=>'price_hight'] )}}">for day</a>
+                                                                <a href="{{route('maisons.allMaisons', ['categorie'=>'rent_day', 'sorting'=>'price_hight'] )}}">par jour</a>
                                                             </li>
                                                             <li>
-                                                                <a href="{{route('maisons.allMaisons', ['categorie'=>'rent_month', 'sorting'=>'price_hight'] )}}">for month</a>
+                                                                <a href="{{route('maisons.allMaisons', ['categorie'=>'rent_month', 'sorting'=>'price_hight'] )}}">par mions</a>
                                                             </li>
                                                         </ul>
                                                     </li>
-                                                    <li><a href="{{route('maisons.allMaisons', ['categorie'=>'sale', 'sorting'=>'price_hight'] )}}" >Houses for Buy</a></li>
+                                                    <li><a href="{{route('maisons.allMaisons', ['categorie'=>'sale', 'sorting'=>'price_hight'] )}}" >Maisons à acheter</a></li>
                                                 </ul>
                                             </li>
+                                            <li class=""><a href="{{route('terrains.allTerrains')}}">Terrains </a>
                                             <li class=""><a href="{{ route("activites.afficherActivites")}}">Activities</a>
                                             </li>
                                             <li class=""><a href="{{ route("about.afficherAbout")}}">About</a>
@@ -134,19 +135,21 @@
                 </div>
                 <div class="ltn__utilize-menu">
                     <ul>
-                        <li><a href="/">Home</a>
+                        <li><a href="/">Accueil</a>
                         </li>
-                        <li class="menu-icon"><a href="{{route('maisons.allMaisons')}}">Houses</a>
+                        <li class="menu-icon"><a href="{{route('maisons.allMaisons')}}">Maisons</a>
                             <ul>
-                                <li><a href="shop.html">Houses for Rent<span class="float-end">>></span></a>
+                                <li><a href="#">maison  à louer <span class="float-end">>></span></a>
                                     <ul>
-                                        <li><a href="cart.html">for day</a></li>
-                                        <li><a href="wishlist.html">for month</a></li>
+                                        <li><a href="{{route('maisons.allMaisons', ['categorie'=>'rent_day', 'sorting'=>'price_hight'] )}}">par jour</a></li>
+                                        <li><a href="{{route('maisons.allMaisons', ['categorie'=>'rent_month', 'sorting'=>'price_hight'] )}}">par mions</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="shop-left-sidebar.html">Houses for Buy</a></li>
+                                <li><a href="{{route('maisons.allMaisons', ['categorie'=>'sale', 'sorting'=>'price_hight'] )}}" >Maisons à acheter</a></li>
                             </ul>
                         </li>
+                        <li class=""><a href="{{route('terrains.allTerrains')}}">Terrains </a>
+
                         <li class=""><a href="{{ route("activites.afficherActivites")}}">Activities</a>
                         </li>
                         <li><a href="{{ route("about.afficherAbout")}}">About</a></li>

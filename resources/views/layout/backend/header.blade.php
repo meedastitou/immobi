@@ -119,8 +119,14 @@
               </a>
             </li>
             <li class="menu-item ">
-              <a href="{{ route("logout.logout") }}" class="menu-link">
+              <a href="{{ route("terrain.index") }}" class="menu-link">
                 <i class='menu-icon tf-icons bx bx-transfer' ></i>
+                <div data-i18n="gestion Terrain">Terrain</div>
+              </a>
+            </li>
+            <li class="menu-item ">
+              <a href="{{ route("logout.logout") }}" class="menu-link">
+                <i class='menu-icon tf-icons x bx-log-out-circle'></i>
                 <div data-i18n="Logout">Logout</div>
               </a>
             </li>

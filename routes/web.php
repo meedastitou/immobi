@@ -7,6 +7,8 @@ use App\Http\Controllers\LouerController;
 use App\Http\Controllers\MaisonController;
 use App\Http\Controllers\Public\MaisonsController;
 use App\Http\Controllers\public\PublicController;
+use App\Http\Controllers\Public\TerrainsController;
+use App\Http\Controllers\TerrainController;
 use App\Http\Controllers\VendeurController;
 use App\Models\Consommateur;
 use Illuminate\Support\Facades\Route;
@@ -53,6 +55,7 @@ Route::get("/activites", [PublicController::class, 'afficherActivites'])->name("
 Route::get("/maisons", [MaisonsController::class, 'allMaisons'])->name('maisons.allMaisons');
 Route::get("/public/maison/{id}", [MaisonsController::class, 'getMaison']);
 
+Route::get("/terrains", [TerrainsController::class, 'allTerrains'])->name('terrains.allTerrains');
 
 
 /*
@@ -89,6 +92,9 @@ Route::group(['middleware' => ['auth']], function(){
     Route::get('/modifierMaison/{id}', [MaisonController::class, 'modifier'])
     ->where('id', '\d+')
     ->name('modifierMaison.modifier');
+
+    Route::delete('/deleteimage/{id}',[MaisonController::class,'deleteimage']);
+
 
     Route::post('/updateMaison', [MaisonController::class, 'update'])->name('updateMaison.update');
 
@@ -172,3 +178,27 @@ Route::group(['middleware' => ['auth']], function(){
 
 });
 
+/*
+    ===================================
+    ========= Terrain
+    ===================================
+    */
+
+    Route::get('/terrain', [TerrainController::class, 'index'])->name('terrain.index');
+
+    Route::get('/ajouterTerrain', [TerrainController::class, 'ajouter'])->name('ajouterTerrain.ajouter');
+
+    Route::post('/storeTerrain', [TerrainController::class, 'store'])->name('storeTerrain.store');
+
+    Route::get('/modifierTerrain/{id}', [TerrainController::class, 'modifier'])
+    ->where('id', '\d+')
+    ->name('modifierTerrain.modifier');
+
+    Route::post('/updateTerrain', [TerrainController::class, 'update'])->name('updateTerrain.update');
+
+    Route::get('/supprimerTerrain/{id}', [TerrainController::class, 'supprimer'])
+    ->where('id', '\d+')
+    ->name('supprimerTerrain.supprimer');
+
+    Route::get('/detailsTerrain/{id}', [TerrainController::class, 'details'])
+    ->name('detailsTerrain.details');
