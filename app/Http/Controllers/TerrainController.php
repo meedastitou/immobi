@@ -7,6 +7,7 @@ use App\Models\maison_images;
 use App\Models\terrain;
 use App\Models\Vendeur;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class TerrainController extends Controller
 {
@@ -81,12 +82,14 @@ class TerrainController extends Controller
     {
         $id = (int)$request->id;
         $terrain = Terrain::find($id);
-        $maison_images= maison_images::where('id_maison', $id)->get();
+        $terrain_images= maison_images::where('id_maison', $id)->get();
+        $vendeurs = Vendeur::all();
+
         
         if ($terrain === NULL) {
             return abort(404);
         } else {
-            return view("backend.modifierMaison", compact(['terrain', 'maison_images']));
+            return view("backend.modifierTerrain", compact(['terrain', 'terrain_images', 'vendeurs']));
         }
     }
 
@@ -94,13 +97,40 @@ class TerrainController extends Controller
     {
         // $consommateur = new Consommateur();
         $terrain = Terrain::find($request->id);
-        $terrain->nom = $request->nom;
-        $terrain->prenom = $request->prenom;
-        $terrain->cne = $request->cne;
-        $terrain->tel = $request->tel;
-        $terrain->email = $request->email;
+        $image_capt = '';
+        if ($request->hasFile('capt')) {
+            if (File::exists("images/".$terrain->capt)) {
+                File::delete("images/".$terrain->capt);
+            }
+            $image_capt = $request->file('capt')->store('images', 'images');
+            $terrain->capt           = $image_capt;
+        }
+
+
+        $terrain->titre              = $request->titre;
+        $terrain->description        = $request->description;
+        $terrain->prix_vende         = $request->prix_vende;
+        $terrain->owner              = $request->owner;
+        $terrain->status             = $request->status;
+        $terrain->categorie         = $request->categorie;
+        $terrain->surface_terre      = $request->surface_terre;
 
         $terrain->save();
+
+        $imagePaths = [];
+        if ($request->hasFile('images')) {
+            foreach ($request->file('images') as $image) {  
+                $imagePath = $image->store('images', 'images');
+                $imagePaths[] = $imagePath;
+            }
+        }
+       
+        foreach ($imagePaths as $path) {
+            $yourModel = maison_images::create([
+                'lien' => $path,
+                'id_maison' => $terrain->id
+            ]);
+        }
 
         return redirect()->route('terrain.index');
     }

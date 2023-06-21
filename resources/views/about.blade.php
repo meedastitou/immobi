@@ -9,7 +9,7 @@
                         <h1 class="page-title">About Us</h1>
                         <div class="ltn__breadcrumb-list">
                             <ul>
-                                <li><a href="/"><span class="ltn__secondary-color"><i class="fas fa-home"></i></span> Home</a></li>
+                                <li><a href="/"><span class="ltn__secondary-color"><i class="fas fa-home"></i></span> Accueill</a></li>
                                 <li>About Us</li>
                             </ul>
                         </div>

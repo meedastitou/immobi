@@ -111,7 +111,7 @@
                 <div class="mt-2">
                   <button type="submit" class="btn btn-primary me-2">Save Changes</button>
                   <button type="reset" class="btn btn-outline-secondary">
-                    <a href="{{ url()->previous() }}">Cancel</a>
+                    <a href="{{ route("maison.index") }}">Cancel</a>
                 </button>                </div>  
               </form>
             </div>
@@ -120,7 +120,7 @@
         
         <div class="holder col-xl-5">
           <div class="image-fluid">
-            <div class="box_image text-center d-flex justify-content-center align-items-center mb-5" style="min-height: 400px;" >
+            <div class="box_image text-center d-flex justify-content-center align-items-center mb-5" style="min-height: 400px;" id="box_capt">
               <img id="image_capt" style="max-width: 100%;"src="{{ asset('storage/' . $maison->capt) }}" alt="pic" />
             </div>
             <div class="box_image text-center d-flex justify-content-center align-items-center" style="min-height: 400px;" id="box_image">

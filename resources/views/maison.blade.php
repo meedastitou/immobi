@@ -9,7 +9,7 @@
                         <h1 class="page-title">Product Details</h1>
                         <div class="ltn__breadcrumb-list">
                             <ul>
-                                <li><a href="/"><span class="ltn__secondary-color"><i class="fas fa-home"></i></span> Home</a></li>
+                                <li><a href="/"><span class="ltn__secondary-color"><i class="fas fa-home"></i></span> Accueill</a></li>
                                 <li>Product Details</li>
                             </ul>
                         </div>
@@ -28,7 +28,7 @@
                 @foreach ($maison_images as $image)
                     <div class="col-lg-12">
                         <div class="ltn__img-slide-item-4">
-                            <a href="{{ asset('storage/' . $image->lien) }}" data-rel="lightcase:myCollection">
+                            <a target="_blank" href="{{ asset('storage/' . $image->lien) }}" >
                                 <img src="{{ asset('storage/' . $image->lien) }}" style="width:100%" alt="Image">
                             </a>
                         </div>
@@ -160,7 +160,7 @@
                         
                         <!-- Form Widget -->
                         <div class="widget ltn__form-widget">
-                            <h4 class="ltn__widget-title ltn__widget-title-border-2">Drop Messege For Book</h4>
+                            <h4 class="ltn__widget-title ltn__widget-title-border-2">Déposer un message</h4>
                             <form action="#">
                                 <input type="text" name="yourname" placeholder="Your Name*">
                                 <input type="text" name="youremail" placeholder="Your e-Mail*">
@@ -168,110 +168,7 @@
                                 <button type="submit" class="btn theme-btn-1">Send Messege</button>
                             </form>
                         </div>
-                        <!-- Popular Product Widget -->
-                        <div class="widget ltn__popular-product-widget">       
-                            <h4 class="ltn__widget-title ltn__widget-title-border-2">Popular Properties</h4>                     
-                            <div class="row ltn__popular-product-widget-active slick-arrow-1">
-                                <!-- ltn__product-item -->
-                                <div class="col-12">
-                                    <div class="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
-                                        <div class="product-img">
-                                            <a href="product-details.html"><img src="/img/product-3/6.jpg" alt="#"></a>
-                                        </div>
-                                        <div class="product-info">
-                                            <div class="product-price">
-                                                <span>$349,00<label>/Month</label></span>
-                                            </div>
-                                            <h2 class="product-title"><a href="product-details.html">New Apartment Nice View</a></h2>
-                                            <div class="product-img-location">
-                                                <ul>
-                                                    <li>
-                                                        <a href="product-details.html"><i class="flaticon-pin"></i> Belmont Gardens, Chicago</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <ul class="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief">
-                                                <li><span>3 </span>
-                                                    Bedrooms
-                                                </li>
-                                                <li><span>2 </span>
-                                                    Bathrooms
-                                                </li>
-                                                <li><span>3450 </span>
-                                                    square Ft
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- ltn__product-item -->
-                                <div class="col-12">
-                                    <div class="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
-                                        <div class="product-img">
-                                            <a href="product-details.html"><img src="/img/product-3/4.jpg" alt="#"></a>
-                                        </div>
-                                        <div class="product-info">
-                                            <div class="product-price">
-                                                <span>$349,00<label>/Month</label></span>
-                                            </div>
-                                            <h2 class="product-title"><a href="product-details.html">New Apartment Nice View</a></h2>
-                                            <div class="product-img-location">
-                                                <ul>
-                                                    <li>
-                                                        <a href="product-details.html"><i class="flaticon-pin"></i> Belmont Gardens, Chicago</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <ul class="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief">
-                                                <li><span>3 </span>
-                                                    Bedrooms
-                                                </li>
-                                                <li><span>2 </span>
-                                                    Bathrooms
-                                                </li>
-                                                <li><span>3450 </span>
-                                                    square Ft
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- ltn__product-item -->
-                                <div class="col-12">
-                                    <div class="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
-                                        <div class="product-img">
-                                            <a href="product-details.html"><img src="/img/product-3/5.jpg" alt="#"></a>
-                                        </div>
-                                        <div class="product-info">
-                                            <div class="product-price">
-                                                <span>$349,00<label>/Month</label></span>
-                                            </div>
-                                            <h2 class="product-title"><a href="product-details.html">New Apartment Nice View</a></h2>
-                                            <div class="product-img-location">
-                                                <ul>
-                                                    <li>
-                                                        <a href="product-details.html"><i class="flaticon-pin"></i> Belmont Gardens, Chicago</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <ul class="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief">
-                                                <li><span>3 </span>
-                                                    Bedrooms
-                                                </li>
-                                                <li><span>2 </span>
-                                                    Bathrooms
-                                                </li>
-                                                <li><span>3450 </span>
-                                                    square Ft
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--  -->
-                            </div>
-                        </div>
-                        <!-- Banner Widget -->
+                        
                         <div class="widget ltn__banner-widget d-none">
                             <a href="shop.html"><img src="/img/banner/2.jpg" alt="#"></a>
                         </div>

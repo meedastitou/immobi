@@ -13,5 +13,7 @@ class maison_images extends Model
         'id_maison'
       
     ];
+
+    
 }
 

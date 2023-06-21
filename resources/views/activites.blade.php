@@ -10,7 +10,7 @@
                         <div class="ltn__breadcrumb-list">
                             <ul>
                                 <li><a href="/"><span class="ltn__secondary-color"><i class="fas fa-home"></i></span>
-                                        Home</a></li>
+                                    Accueill</a></li>
                                 <li>Actitvites</li>
                             </ul>
                         </div>
