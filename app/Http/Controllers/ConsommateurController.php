@@ -91,7 +91,7 @@ class ConsommateurController extends Controller
         if ($consommateur === NULL) {
             return abort(404);
         } else {
-            return view("backend.detailsConsommateur", compact('veconsommateurdeur'));
+            return view("backend.detailsConsommateur", compact('consommateur'));
         }
     }
 }

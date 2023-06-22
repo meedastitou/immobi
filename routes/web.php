@@ -56,6 +56,7 @@ Route::get("/maisons", [MaisonsController::class, 'allMaisons'])->name('maisons.
 Route::get("/public/maison/{id}", [MaisonsController::class, 'getMaison']);
 
 Route::get("/terrains", [TerrainsController::class, 'allTerrains'])->name('terrains.allTerrains');
+Route::get("/public/terrain/{id}", [TerrainsController::class, 'getTerrain']);
 
 
 /*
@@ -195,6 +196,10 @@ Route::group(['middleware' => ['auth']], function(){
     ->name('modifierTerrain.modifier');
 
     Route::post('/updateTerrain', [TerrainController::class, 'update'])->name('updateTerrain.update');
+
+    Route::delete('/deleteimageTerrain/{id}',[TerrainController::class,'deleteimage']);
+
+
 
     Route::get('/supprimerTerrain/{id}', [TerrainController::class, 'supprimer'])
     ->where('id', '\d+')

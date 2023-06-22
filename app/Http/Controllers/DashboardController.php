@@ -10,6 +10,6 @@ class DashboardController extends Controller
     //
     public function index(){
         $user = Auth::user();
-        return view("backend.index", compact('user'));
+        return redirect('/maison');
     }
 }

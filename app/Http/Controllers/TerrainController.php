@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\maison_categorie;
 use App\Models\maison_images;
 use App\Models\terrain;
+use App\Models\terrain_images;
 use App\Models\Vendeur;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
@@ -69,20 +70,21 @@ class TerrainController extends Controller
         }
        
         foreach ($imagePaths as $path) {
-            $yourModel = maison_images::create([
+            $yourModel = terrain_images::create([
                 'lien' => $path,
-                'id_maison' => $terrain->id
+                'id_terrain' => $terrain->id
             ]);
         }
 
         return redirect()->route('terrain.index')->with("success", "la Terrain est bien enrigistree");
     }
 
+
     public function modifier(Request $request)
     {
         $id = (int)$request->id;
         $terrain = Terrain::find($id);
-        $terrain_images= maison_images::where('id_maison', $id)->get();
+        $terrain_images= terrain_images::where('id_terrain', $id)->get();
         $vendeurs = Vendeur::all();
 
         
@@ -152,12 +154,22 @@ class TerrainController extends Controller
         $id = (int)$request->id;
         $terrain = Terrain::find($id);
         $owner = Vendeur::find($terrain->owner);
-        $maison_images= maison_images::where('id_maison', $id)->get();
+        $terrain_images= terrain_images::where('id_terrain', $id)->get();
 
         if ($terrain === NULL) {
             return abort(404);
         } else {
-            return view("backend.detailsMaison", compact(['terrain', 'owner', 'maison_images']));
+            return view("backend.detailsTerrain", compact(['terrain', 'owner', 'terrain_images']));
         }
     }
+
+    public function deleteimage($id){
+        $images=terrain_images::findOrFail($id);
+        if (File::exists("images/".$images->lien)) {
+           File::delete("images/".$images->lien);
+        }
+
+        terrain_images::find($id)->delete();
+       return back();
+   }
 }

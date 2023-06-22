@@ -21,11 +21,11 @@
     <!-- BREADCRUMB AREA END --> --}}
 
     <!-- IMAGE SLIDER AREA START (img-slider-3) -->
-    <div class="ltn__img-slider-area mb-50">
+    <div class="ltn__img-slider-area mb-90">
         <div class="container-fluid">
             <div class="row ltn__image-slider-5-active slick-arrow-1 slick-arrow-1-inner ltn__no-gutter-all">
                 
-                @foreach ($maison_images as $image)
+                @foreach ($terrain_images as $image)
                     <div class="col-lg-12">
                         <div class="ltn__img-slide-item-4">
                             <a target="_blank" href="{{ asset('storage/' . $image->lien) }}" >
@@ -45,43 +45,19 @@
             <div class="row">
                 <div class="col-lg-8 col-md-12">
                     <div class="ltn__shop-details-inner ltn__page-details-inner mb-60">
-                        <div class="ltn__blog-meta">
-                            <ul>
-                                @if ($maison->prix_vende)
-                                    <li class="sale-badge bg-green px-1 rounded-3 f-size-2">For SALE</li>
-                                @endif
-                                @if ($maison->prix_louer_moin)
-                                    <li class="sale-badge bg-green px-1 rounded-3 f-size-2">For RENT month</li>
-                                @endif
-                                @if ($maison->prix_louer_jour)
-                                    <li class="sale-badge bg-green px-1 rounded-3 f-size-2">For RENT day</li>
-                                @endif
-                            </ul>
-                        </div>
-                        <h1>{{$maison->titre}}</h1>
+                        
+                        <h1>{{$terrain->titre}}</h1>
                         <h4 class="title-2">Description</h4>
-                        <p>{{$maison->description}}</p>
-                        <ul class="b32xv3">
-                            <li><span>{{ $maison->nb_chambre }} <i class="flaticon-bed"></i></span>
-                                Chambres
-                            </li>
-                            <li><span>{{ $maison->nb_douche }} <i class="flaticon-clean"></i></span>
-                                Salles de bain
-                            </li>
-                            <li><span>{{{$maison->surface_maison}}} <i
-                                        class="flaticon-square-shape-design-interface-tool-symbol"></i></span>
-                                Surface de Maison
-                            </li>
-                            <li>
-                                <span>{{{$maison->surface_terre}}} <i
-                                    class="flaticon-square-shape-design-interface-tool-symbol"></i></span>
-                                Surface de Terre
+                        <p>{{$terrain->description}}</p>
+                        <ul class="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief">
+                            <li><span>{{$terrain->surface_terre}} </span>
+                                square Ft
                             </li>
                         </ul>
                         <h4 class="title-2">From Our Gallery</h4>
                         <div class="ltn__property-details-gallery mb-30">
                             <div class="row">                                    
-                                    @foreach ($maison_images as $image)
+                                    @foreach ($terrain_images as $image)
                                     <a href="{{ asset('storage/' . $image->lien) }}" data-rel="lightcase:myCollection">
                                         <img class="mb-30" src="{{ asset('storage/' . $image->lien) }}" alt="Image">
                                     </a>
@@ -90,79 +66,14 @@
                         </div>
 
 
-                        <h4 class="title-2">Related Properties</h4>
-                        <div class="row">
-                            @foreach ($maisons as $item)
-                                <!-- ltn__product-item -->
-                                <div class="col-xl-6 col-sm-6 col-12">
-                                    <div class="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
-                                        <div class="product-img">
-                                            <a href="/public/maison/{{$item->id}}"><img alt="#"
-                                                    @if ($item->capt) src="{{ asset('storage/' . $item->capt) }}"
-                                                @else
-                                                    src=" {{ asset('storage/1946488.png') }} " @endif>
-                                            </a>
-
-                                        </div>
-                                        <div class="product-info">
-                                            <div class="product-badge">
-                                                <ul>
-                                                    @if ($item->prix_vende)
-                                                        <li class="sale-badge bg-green px-1 rounded-3 f-size-2">For SALE
-                                                        </li>
-                                                    @endif
-                                                    @if ($item->prix_louer_moin)
-                                                        <li class="sale-badge bg-green px-1 rounded-3 f-size-2">For RENT
-                                                            month</li>
-                                                    @endif
-                                                    @if ($item->prix_louer_jour)
-                                                        <li class="sale-badge bg-green px-1 rounded-3 f-size-2">For RENT day
-                                                        </li>
-                                                    @endif
-                                                </ul>
-                                            </div>
-                                            <h2 class="product-title"><a
-                                                href="/public/maison/{{$item->id}}">{{ Str::limit($item->titre, 20) }}</a>
-                                            </h2>
-
-                                            <ul class="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief">
-                                                <li><span>{{ $item->nb_chambre }} </span>
-                                                    Bedrooms
-                                                </li>
-                                                <li><span>{{ $item->nb_douche }} </span>
-                                                    Bathrooms
-                                                </li>
-                                                <li><span>{{ $item->surface_maison }} </span>
-                                                    square Ft
-                                                </li>
-                                            </ul>
-
-                                        </div>
-                                        <div class="product-info-bottom">
-                                            <div class="product-price">
-                                                @if ($item->prix_vende)
-                                                    <span>{{ $item->prix_vende }}<label> DH /Vende</label></span>
-                                                @endif
-                                                @if ($item->prix_louer_moin)
-                                                    <span>{{ $item->prix_louer_moin }}<label> DH /Month</label></span>
-                                                @endif
-                                                @if ($item->prix_louer_jour)
-                                                    <span>{{ $item->prix_louer_jour }}<label> DH /Jour</label></span>
-                                                @endif
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            @endforeach
-                           
-                        </div>
+                     
                     </div>
                 </div>
-                <div class="col-lg-4">
+                {{-- <div class="col-lg-4">
                     <aside class="sidebar ltn__shop-sidebar ltn__right-sidebar---">
                         
                         <!-- Form Widget -->
-                        {{-- <div class="widget ltn__form-widget">
+                        <div class="widget ltn__form-widget">
                             <h4 class="ltn__widget-title ltn__widget-title-border-2">Déposer un message</h4>
                             <form action="#">
                                 <input type="text" name="yourname" placeholder="Your Name*">
@@ -170,19 +81,19 @@
                                 <textarea name="yourmessage" placeholder="Write Message..."></textarea>
                                 <button type="submit" class="btn theme-btn-1">Send Messege</button>
                             </form>
-                        </div> --}}
+                        </div>
                         
                         <div class="widget ltn__banner-widget d-none">
                             <a href="shop.html"><img src="/img/banner/2.jpg" alt="#"></a>
                         </div>
                     </aside>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
     <!-- SHOP DETAILS AREA END -->
 
-    <!-- PRODUCT SLIDER AREA START -->
+    {{-- <!-- PRODUCT SLIDER AREA START -->
     <div class="ltn__product-slider-area ltn__product-gutter pb-70 d-none">
         <div class="container">
             <div class="row">
@@ -502,5 +413,5 @@
             </div>
         </div>
     </div>
-    <!-- PRODUCT SLIDER AREA END -->
+    <!-- PRODUCT SLIDER AREA END --> --}}
 @endsection

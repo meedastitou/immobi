@@ -7112,7 +7112,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   align-items: center;
   margin-bottom: 25px;
   padding-bottom: 15px;
-  border-bottom: 1px solid #eee;
+  /* border-bottom: 1px solid #eee; */
 }
 
 .ltn__utilize-menu-head .ltn__utilize-menu-title {
@@ -16176,7 +16176,7 @@ input.cart-plus-minus-box {
   position: relative;
   margin-right: 30px;
   max-width: 160px;
-  font-size: 14px;
+  font-size: 11px;
 }
 
 .ltn__list-item-2 li span {
@@ -18654,12 +18654,12 @@ input.cart-plus-minus-box {
     Footer Area
 -------------------------*/
 .footer-top-area {
-  padding-top: 92px;
+  padding-top: 20px;
   padding-bottom: 20px;
 }
 
 .footer-widget {
-  margin-bottom: 60px;
+  /* margin-bottom: 60px; */
 }
 
 .footer-logo {
@@ -19465,3 +19465,24 @@ ul.pagination li:last-child a{
 }
 
 
+.b32xv3{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+.b32xv3 li{
+  padding: 20px ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ececec;
+  margin: 5px 10px;
+  border-radius: 4px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.411);
+}
+.b32xv3 li:hover{
+  border: 1px solid var(--ltn__secondary-color);
+  color: #fff;
+  background-color: var(--ltn__secondary-color);
+}

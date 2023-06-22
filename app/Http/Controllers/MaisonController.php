@@ -8,6 +8,7 @@ use App\Models\maison_images;
 use App\Models\Vendeur;
 use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class MaisonController extends Controller
 {
@@ -175,7 +176,14 @@ class MaisonController extends Controller
         $maison = Maison::find($id);
         $owner = Vendeur::find($maison->owner);
         $maison_images= maison_images::where('id_maison', $id)->get();
-
+        // $louers = DB::table('louers')->where('id_maison', $id)->get();
+        // foreach($louers as $louer){
+        //     $endtimestamp = strtotime($louer->date_fin);
+        //     $starttimestamp = strtotime($louer->date_louer);
+	    //     $difference = abs($endtimestamp - $starttimestamp)/3600;
+        //     echo $difference . "<br>";
+        // }
+        // print_r($cont_maison);
         if ($maison === NULL) {
             return abort(404);
         } else {

@@ -11,13 +11,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Place favicon.png in the root directory -->
-    <link rel="shortcut icon" href="/img/badre-logo.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="/img/logo-badree.png" type="image/x-icon" />
     <!-- Font Icons css -->
     <link rel="stylesheet" href="/css/font-icons.css">
     <!-- plugins css -->
     <link rel="stylesheet" href="/css/plugins.css">
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="/css/icon_whatsapp.css">
     <!-- Responsive css -->
     <link rel="stylesheet" href="/css/responsive.css">
 </head>
@@ -28,56 +31,22 @@
 
         <!-- HEADER AREA START (header-5) -->
         <header class="ltn__header-area ltn__header-5 ltn__header-transparent--- gradient-color-4---">
-           
+
 
             <!-- ltn__header-middle-area start -->
             <div class="ltn__header-middle-area ltn__header-sticky ltn__sticky-bg-white">
                 <div class="container">
                     <div class="row">
-                        <div class="col">
+                        <div class="col-6 col-sm-4">
                             <div class="site-logo-wrap">
                                 <div class="site-logo">
                                     <a href="/"><img src="/img/badre-logo.png" class="logo" alt="Logo"></a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col header-menu-column">
-                            <div class="header-menu d-flex justify-content-center">
-                                <nav>
-                                    <div class="ltn__main-menu">
-                                        <ul>
-                                            <li class=""><a href="/">Accuell</a>
-                                            </li>
-                                            <li class="menu-icon"><a href="{{route('maisons.allMaisons')}}">Maisons </a>
-                                                <ul>
-                                                    <li><a href="#">maison  à louer<span class="float-end">>></span></a>
-                                                        <ul>
-                                                            <li>
-                                                                <a href="{{route('maisons.allMaisons', ['categorie'=>'rent_day', 'sorting'=>'price_hight'] )}}">par jour</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="{{route('maisons.allMaisons', ['categorie'=>'rent_month', 'sorting'=>'price_hight'] )}}">par mions</a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a href="{{route('maisons.allMaisons', ['categorie'=>'sale', 'sorting'=>'price_hight'] )}}" >Maisons à acheter</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class=""><a href="{{route('terrains.allTerrains')}}">Terrains </a>
-                                            <li class=""><a href="{{ route("activites.afficherActivites")}}">Activities</a>
-                                            </li>
-                                            <li class=""><a href="{{ route("about.afficherAbout")}}">About</a>
-                                            </li>
-                                            <li><a href="{{ route("contact.afficherContact")}}">Contact</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </nav>
-                            </div>
-                        </div>
-                        <div class="col ltn__header-options ltn__header-options-2 mb-sm-20">
+                        <div class="col ltn__header-options-2 mb-sm-20">
                             <!-- header-search-1 -->
-                            <div class="header-search-wrap">
+                            {{-- <div class="header-search-wrap">
                                 <div class="header-search-1">
                                     <div class="search-icon">
                                         <i class="icon-search for-search-show"></i>
@@ -92,7 +61,7 @@
                                         </button>
                                     </form>
                                 </div>
-                            </div>
+                            </div> --}}
 
                             <!-- mini-cart -->
                             <!-- Mobile Menu Button -->
@@ -111,6 +80,51 @@
                                 </a>
                             </div>
                         </div>
+                        <div class="col header-menu-column">
+                            <div class="header-menu d-flex justify-content-center">
+                                <nav>
+                                    <div class="ltn__main-menu">
+                                        <ul>
+                                            <li class=""><a href="/">Accuell</a>
+                                            </li>
+                                            <li class="menu-icon"><a href="{{ route('maisons.allMaisons') }}">Maisons
+                                                </a>
+                                                <ul>
+                                                    <li><a href="#">maison à louer<span
+                                                                class="float-end">>></span></a>
+                                                        <ul>
+                                                            <li>
+                                                                <a
+                                                                    href="{{ route('maisons.allMaisons', ['categorie' => 'rent_day', 'sorting' => 'price_hight']) }}">par
+                                                                    jour</a>
+                                                            </li>
+                                                            <li>
+                                                                <a
+                                                                    href="{{ route('maisons.allMaisons', ['categorie' => 'rent_month', 'sorting' => 'price_hight']) }}">par
+                                                                    mions</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a
+                                                            href="{{ route('maisons.allMaisons', ['categorie' => 'sale', 'sorting' => 'price_hight']) }}">Maisons
+                                                            à acheter</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class=""><a href="{{ route('terrains.allTerrains') }}">Terrains
+                                                </a>
+                                            <li class=""><a
+                                                    href="{{ route('activites.afficherActivites') }}">Activities</a>
+                                            </li>
+                                            <li class=""><a href="{{ route('about.afficherAbout') }}">About</a>
+                                            </li>
+                                            <li><a href="{{ route('contact.afficherContact') }}">Contact</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -121,48 +135,54 @@
         <!-- Utilize Mobile Menu Start -->
         <div id="ltn__utilize-mobile-menu" class="ltn__utilize ltn__utilize-mobile-menu">
             <div class="ltn__utilize-menu-inner ltn__scrollbar">
-                <div class="ltn__utilize-menu-head flex-column ">
-                    <button class="ltn__utilize-close">×</button>
+                <div class="ltn__utilize-menu-head ">
                     <div class="site-logo">
-                        <a href="/"><img src="img/logo-badree.png" alt="Logo"></a>
+                        <a href="/"><img src="/img/badre-logo.png" class="logo" alt="Logo"></a>
+                    </div>
+                    <div style="height: 100%">
+                        <button class="ltn__utilize-close">×</button>
                     </div>
                 </div>
-                <div class="ltn__utilize-menu-search-form">
+                {{-- <div class="ltn__utilize-menu-search-form">
                     <form action="#">
                         <input type="text" placeholder="Search...">
                         <button><i class="fas fa-search"></i></button>
                     </form>
-                </div>
+                </div> --}}
                 <div class="ltn__utilize-menu">
                     <ul>
+
                         <li><a href="/">Accueil</a>
                         </li>
-                        <li class="menu-icon"><a href="{{route('maisons.allMaisons')}}">Maisons</a>
-                            <ul>
-                                <li><a href="#">maison  à louer <span class="float-end">>></span></a>
-                                    <ul>
-                                        <li><a href="{{route('maisons.allMaisons', ['categorie'=>'rent_day', 'sorting'=>'price_hight'] )}}">par jour</a></li>
-                                        <li><a href="{{route('maisons.allMaisons', ['categorie'=>'rent_month', 'sorting'=>'price_hight'] )}}">par mions</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="{{route('maisons.allMaisons', ['categorie'=>'sale', 'sorting'=>'price_hight'] )}}" >Maisons à acheter</a></li>
-                            </ul>
-                        </li>
-                        <li class=""><a href="{{route('terrains.allTerrains')}}">Terrains </a>
+                        <li class=""><a href="{{ route('maisons.allMaisons') }}">toutes les Maisons</a>
 
-                        <li class=""><a href="{{ route("activites.afficherActivites")}}">Activities</a>
+                        <li><a
+                                href="{{ route('maisons.allMaisons', ['categorie' => 'rent_day', 'sorting' => 'price_hight']) }}">Maisons Louer par
+                                jour</a></li>
+                        <li><a
+                                href="{{ route('maisons.allMaisons', ['categorie' => 'rent_month', 'sorting' => 'price_hight']) }}">Maisons Louer  par
+                                mions</a></li>
                         </li>
-                        <li><a href="{{ route("about.afficherAbout")}}">About</a></li>
+                        <li><a
+                                href="{{ route('maisons.allMaisons', ['categorie' => 'sale', 'sorting' => 'price_hight']) }}">Maisons
+                                à acheter</a></li>
+                        </li>
+                        <li>
 
-                        <li><a href="{{ route("contact.afficherContact")}}">Contact</a></li>
+                        </li>
+                        <li class=""><a href="{{ route('terrains.allTerrains') }}">Terrains </a>
+
+                        <li class=""><a href="{{ route('activites.afficherActivites') }}">Activities</a>
+                        </li>
+                        <li><a href="{{ route('about.afficherAbout') }}">About</a></li>
+
+                        <li><a href="{{ route('contact.afficherContact') }}">Contact</a></li>
                     </ul>
                 </div>
                 <div class="ltn__social-media-2">
                     <ul>
                         <li><a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#" title="Twitter"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#" title="Linkedin"><i class="fab fa-linkedin"></i></a></li>
-                        <li><a href="#" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#" title="Youtube"><i class="fab fa-youtube"></i></a></li>
                     </ul>
                 </div>
 

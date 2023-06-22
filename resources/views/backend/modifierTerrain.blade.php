@@ -34,7 +34,8 @@
                                     <div class="col-md-9">
                                         <select required name="status" id="status" class="form-control">
                                             <option id="" value="DESPONIBLE"
-                                                @if ($terrain->status == 'DESPONIBLE') @selected(true) @endif>DESPONIBLE</option>
+                                                @if ($terrain->status == 'DESPONIBLE') @selected(true) @endif>
+                                                DESPONIBLE</option>
                                             
                                             <option id=""
                                                 value="INDESPONIBLE"@if ($terrain->status == 'INDESPONIBLE') @selected(true) @endif>
@@ -118,7 +119,7 @@
                         <div id="box_list_images" class="d-flex justify-content-center mt-2">
                             @foreach ($terrain_images as $image)
                                 <div class="d-flex flex-column text-center me-2">
-                                    <form action="/deleteimage/{{ $image->id }}" method="post">
+                                    <form action="/deleteimageTerrain/{{ $image->id }}" method="post">
                                         <button class="btn text-danger">X</button>
                                         @csrf
                                         @method('delete')

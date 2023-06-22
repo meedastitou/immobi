@@ -88,12 +88,12 @@
 
           <ul class="menu-inner py-1">
             <!-- Dashboard -->
-            <li class="menu-item active">
+            {{-- <li class="menu-item active">
               <a href="/admin" class="menu-link">
                 <i class='menu-icon tf-icons bx bx-home-smile bx-tada' ></i>
                 <div data-i18n="Analytics">Dashboard</div>
               </a>
-            </li>
+            </li> --}}
             <li class="menu-item ">
               <a href="{{ route("maison.index") }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
@@ -138,10 +138,10 @@
         <div class="layout-page">
           <!-- Navbar -->
 
-          <nav
+          {{-- <nav
             class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
             id="layout-navbar"
-          >
+            >
             <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
               <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
                 <i class="bx bx-menu bx-sm"></i>
@@ -238,6 +238,6 @@
                 <!--/ User -->
               </ul>
             </div>
-          </nav>
+          </nav> --}}
 
           <!-- / Navbar -->

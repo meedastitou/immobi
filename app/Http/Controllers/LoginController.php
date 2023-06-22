@@ -20,7 +20,7 @@ class LoginController extends Controller
 
         $credentials = ['email' => $validated['email'], 'password' => $validated['password']];
         if(Auth::attempt($credentials)){
-            return redirect('/admin');
+            return redirect('/maison');
         }
         // var_dump(Auth::user());
     }

@@ -60,7 +60,7 @@
     </div>
     <!-- CONTACT ADDRESS AREA END -->
 
-    <!-- CONTACT MESSAGE AREA START -->
+    {{-- <!-- CONTACT MESSAGE AREA START -->
     <div class="ltn__contact-message-area mb-120 mb--100">
         <div class="container">
             <div class="row">
@@ -114,7 +114,7 @@
             </div>
         </div>
     </div>
-    <!-- CONTACT MESSAGE AREA END -->
+    <!-- CONTACT MESSAGE AREA END --> --}}
 
     <!-- GOOGLE MAP AREA START -->
     <div class="google-map mb-120">
@@ -132,7 +132,7 @@
     </div>
     <!-- GOOGLE MAP AREA END -->
 
-    <!-- CALL TO ACTION START (call-to-action-6) -->
+    {{-- <!-- CALL TO ACTION START (call-to-action-6) -->
     <div class="ltn__call-to-action-area call-to-action-6 before-bg-bottom" data-bs-bg="img/1.jpg--">
         <div class="container">
             <div class="row">
@@ -152,5 +152,5 @@
             </div>
         </div>
     </div>
-    <!-- CALL TO ACTION END -->
+    <!-- CALL TO ACTION END --> --}}
 @endsection

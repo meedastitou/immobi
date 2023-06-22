@@ -1,7 +1,7 @@
 @extends('layout.master')
 
 @section('main')
-    <!-- BREADCRUMB AREA START -->
+    {{-- <!-- BREADCRUMB AREA START -->
     <div class="ltn__breadcrumb-area text-left bg-overlay-white-30 bg-image " data-bs-bg="img/bg/14.jpg">
         <div class="container">
             <div class="row">
@@ -20,7 +20,7 @@
             </div>
         </div>
     </div>
-    <!-- BREADCRUMB AREA END -->
+    <!-- BREADCRUMB AREA END --> --}}
 
     <!-- PRODUCT DETAILS AREA START -->
     <div class="ltn__product-area ltn__product-gutter mb-100">
@@ -32,32 +32,37 @@
 
                         <div class="ltn__car-dealer-form-item ltn__custom-icon---- ltn__icon-meter---- col-lg-5 col-md-6">
                             <select class="nice-select" name="categorie">
-                                <option >Property Status</option>
+                                <option >Statut de la propriété
+                                </option>
                                 <option value="sale" @if (request()->get('categorie') == 'sale')
                                     @selected(true)
-                                @endif>Sale</option>
+                                @endif>Vender</option>
                                 <option value="rent_month" @if (request()->get('categorie') == 'rent_month')
                                     @selected(true)
-                                @endif>Rent MONTH</option>
+                                @endif>Louer par Moins</option>
                                 <option value="rent_day" @if (request()->get('categorie') == 'rent_day')
                                     @selected(true)
-                                @endif>Rent DAY</option>
+                                @endif>Louer par Jours</option>
                             </select>
                         </div>
                         <div
                             class="ltn__car-dealer-form-item ltn__custom-icon---- ltn__icon-calendar---- col-lg-4 col-md-6">
                             <select class="nice-select" name="sorting">
-                                <option disabled>Default sorting</option>
+                                <option disabled>Tri par défaut
+                                </option>
                                 <!-- <option>Sort by popularity</option> -->
                                 <option value="arrivals" @if (request()->get('sorting') == 'arrivals')
                                     @selected(true)
-                                @endif>Sort by new arrivals</option>
+                                @endif>Trier par nouveautés
+                            </option>
                                 <option value="price_low" @if (request()->get('sorting') == 'price_low')
                                     @selected(true)
-                                @endif>Sort by price: low to high</option>
+                                @endif>Trier par prix : du plus bas au plus élevé
+                            </option>
                                 <option value="price_hight" @if (request()->get('sorting') == 'price_hight')
                                     @selected(true)
-                                @endif>Sort by price: high to low</option>
+                                @endif>Trier par prix : décroissant
+                            </option>
                             </select>
                         </div>
                         <div class="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-calendar col-lg-3 col-md-6">
@@ -103,13 +108,13 @@
                                                 <div class="product-badge">
                                                     <ul>
                                                         @if ($maison->prix_vende)
-                                                            <li class="sale-badge bg-green px-1 rounded-3 f-size-2">For SALE</li>
+                                                            <li class="sale-badge bg-green px-1 rounded-3 f-size-2">Vende</li>
                                                         @endif
                                                         @if ($maison->prix_louer_moin)
-                                                            <li class="sale-badge bg-green px-1 rounded-3 f-size-2">For RENT month</li>
+                                                            <li class="sale-badge bg-green px-1 rounded-3 f-size-2">Moins</li>
                                                         @endif
                                                         @if ($maison->prix_louer_jour)
-                                                            <li class="sale-badge bg-green px-1 rounded-3 f-size-2">For RENT day</li>
+                                                            <li class="sale-badge bg-green px-1 rounded-3 f-size-2">Jours</li>
                                                         @endif
                                                     </ul>
                                                 </div>
@@ -157,25 +162,5 @@
     </div>
     <!-- PRODUCT DETAILS AREA END -->
 
-    <!-- CALL TO ACTION START (call-to-action-6) -->
-    <div class="ltn__call-to-action-area call-to-action-6 before-bg-bottom" data-bs-bg="img/1.jpg--">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div
-                        class="call-to-action-inner call-to-action-inner-6 ltn__secondary-bg position-relative text-center---">
-                        <div class="coll-to-info text-color-white">
-                            <h1>Looking for a dream home?</h1>
-                            <p>We can help you realize your dream of a new home</p>
-                        </div>
-                        <div class="btn-wrapper">
-                            <a class="btn btn-effect-3 btn-white" href="{{route('contact.afficherContact')}}">Explore Properties <i
-                                    class="icon-next"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- CALL TO ACTION END -->
+    
 @endsection

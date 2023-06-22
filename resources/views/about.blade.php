@@ -1,6 +1,6 @@
 @extends('layout.master')
 @section('main')
-    <!-- BREADCRUMB AREA START -->
+    {{-- <!-- BREADCRUMB AREA START -->
     <div class="ltn__breadcrumb-area text-left bg-overlay-white-30 bg-image "  data-bs-bg="img/bg/14.jpg">
         <div class="container">
             <div class="row">
@@ -18,7 +18,7 @@
             </div>
         </div>
     </div>
-    <!-- BREADCRUMB AREA END -->
+    <!-- BREADCRUMB AREA END --> --}}
 
     <!-- ABOUT US AREA START -->
     <div class="ltn__about-us-area pt-120--- pb-90 mt--30">
@@ -86,7 +86,8 @@
                 <div class="col-lg-12">
                     <div class="section-title-area ltn__section-title-2--- text-center">
                         <h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">Our Services</h6>
-                        <h1 class="section-title">Our Main Focus</h1>
+                        <h1 class="section-title">Notre objectif principal
+                        </h1>
                     </div>
                 </div>
             </div>
@@ -98,9 +99,12 @@
                             <img src="img/icons/icon-img/21.png" alt="#">
                         </div>
                         <div class="ltn__feature-info">
-                            <h3><a href="service-details.html">Buy a home</a></h3>
-                            <p>over 1 million+ homes for sale available on the website, we can match you with a house you will want to call home.</p>
-                            <a class="ltn__service-btn" href="service-details.html">Find A Home <i class="flaticon-right-arrow"></i></a>
+                            <h3><a href="service-details.html">Acheter une maison
+                            </a></h3>
+                            <p>plus d'un million de maisons à vendre disponibles sur le site Web, nous pouvons vous jumeler avec une maison que vous voudrez appeler chez vous.
+                            </p>
+                            <a class="ltn__service-btn" href="#">Trouver une maison
+                                <i class="flaticon-right-arrow"></i></a>
                         </div>
                     </div>
                 </div>
@@ -111,9 +115,11 @@
                             <img src="img/icons/icon-img/22.png" alt="#">
                         </div>
                         <div class="ltn__feature-info">
-                            <h3><a href="service-details.html">Rent a home</a></h3>
-                            <p>over 1 million+ homes for sale available on the website, we can match you with a house you will want to call home.</p>
-                            <a class="ltn__service-btn" href="service-details.html">Find A Home <i class="flaticon-right-arrow"></i></a>
+                            <h3><a href="service-details.html">Louer une maison
+                            </a></h3>
+                            <p>plus d'un million de maisons à vendre disponibles sur le site Web, nous pouvons vous jumeler avec une maison que vous voudrez appeler chez vous.<
+                            </p>
+                            <a class="ltn__service-btn" href="#">Trouver une maison <i class="flaticon-right-arrow"></i></a>
                         </div>
                     </div>
                 </div>
@@ -124,9 +130,11 @@
                             <img src="img/icons/icon-img/23.png" alt="#">
                         </div>
                         <div class="ltn__feature-info">
-                            <h3><a href="service-details.html">Sell a home</a></h3>
-                            <p>over 1 million+ homes for sale available on the website, we can match you with a house you will want to call home.</p>
-                            <a class="ltn__service-btn" href="service-details.html">Find A Home <i class="flaticon-right-arrow"></i></a>
+                            <h3><a href="service-details.html">Vendre une maison
+                            </a></h3>
+                            <p>plus d'un million de maisons à vendre disponibles sur le site Web, nous pouvons vous jumeler avec une maison que vous voudrez appeler chez vous.
+                            </p>
+                            <a class="ltn__service-btn" href="service-details.html">Trouver une maison <i class="flaticon-right-arrow"></i></a>
                         </div>
                     </div>
                 </div>
@@ -134,177 +142,4 @@
         </div>
     </div>
     <!-- FEATURE AREA END -->
-
-    <!-- BLOG AREA START (blog-3) -->
-    <div class="ltn__blog-area pt-115--- pb-70">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title-area ltn__section-title-2--- text-center">
-                        <h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">News & Blogs</h6>
-                        <h1 class="section-title">Leatest News Feeds</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="row  ltn__blog-slider-one-active slick-arrow-1 ltn__blog-item-3-normal">
-                <!-- Blog Item -->
-                <div class="col-lg-12">
-                    <div class="ltn__blog-item ltn__blog-item-3">
-                        <div class="ltn__blog-img">
-                            <a href="blog-details.html"><img src="img/blog/1.jpg" alt="#"></a>
-                        </div>
-                        <div class="ltn__blog-brief">
-                            <div class="ltn__blog-meta">
-                                <ul>
-                                    <li class="ltn__blog-author">
-                                        <a href="#"><i class="far fa-user"></i>by: Admin</a>
-                                    </li>
-                                    <li class="ltn__blog-tags">
-                                        <a href="#"><i class="fas fa-tags"></i>Decorate</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <h3 class="ltn__blog-title"><a href="blog-details.html">10 Brilliant Ways To Decorate Your Home</a></h3>
-                            <div class="ltn__blog-meta-btn">
-                                <div class="ltn__blog-meta">
-                                    <ul>
-                                        <li class="ltn__blog-date"><i class="far fa-calendar-alt"></i>June 24, 2021</li>
-                                    </ul>
-                                </div>
-                                <div class="ltn__blog-btn">
-                                    <a href="blog-details.html">Read more</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Blog Item -->
-                <div class="col-lg-12">
-                    <div class="ltn__blog-item ltn__blog-item-3">
-                        <div class="ltn__blog-img">
-                            <a href="blog-details.html"><img src="img/blog/2.jpg" alt="#"></a>
-                        </div>
-                        <div class="ltn__blog-brief">
-                            <div class="ltn__blog-meta">
-                                <ul>
-                                    <li class="ltn__blog-author">
-                                        <a href="#"><i class="far fa-user"></i>by: Admin</a>
-                                    </li>
-                                    <li class="ltn__blog-tags">
-                                        <a href="#"><i class="fas fa-tags"></i>Interior</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <h3 class="ltn__blog-title"><a href="blog-details.html">The Most Inspiring Interior Design Of 2021</a></h3>
-                            <div class="ltn__blog-meta-btn">
-                                <div class="ltn__blog-meta">
-                                    <ul>
-                                        <li class="ltn__blog-date"><i class="far fa-calendar-alt"></i>July 23, 2021</li>
-                                    </ul>
-                                </div>
-                                <div class="ltn__blog-btn">
-                                    <a href="blog-details.html">Read more</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Blog Item -->
-                <div class="col-lg-12">
-                    <div class="ltn__blog-item ltn__blog-item-3">
-                        <div class="ltn__blog-img">
-                            <a href="blog-details.html"><img src="img/blog/3.jpg" alt="#"></a>
-                        </div>
-                        <div class="ltn__blog-brief">
-                            <div class="ltn__blog-meta">
-                                <ul>
-                                    <li class="ltn__blog-author">
-                                        <a href="#"><i class="far fa-user"></i>by: Admin</a>
-                                    </li>
-                                    <li class="ltn__blog-tags">
-                                        <a href="#"><i class="fas fa-tags"></i>Estate</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <h3 class="ltn__blog-title"><a href="blog-details.html">Recent Commercial Real Estate Transactions</a></h3>
-                            <div class="ltn__blog-meta-btn">
-                                <div class="ltn__blog-meta">
-                                    <ul>
-                                        <li class="ltn__blog-date"><i class="far fa-calendar-alt"></i>May 22, 2021</li>
-                                    </ul>
-                                </div>
-                                <div class="ltn__blog-btn">
-                                    <a href="blog-details.html">Read more</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Blog Item -->
-                <div class="col-lg-12">
-                    <div class="ltn__blog-item ltn__blog-item-3">
-                        <div class="ltn__blog-img">
-                            <a href="blog-details.html"><img src="img/blog/4.jpg" alt="#"></a>
-                        </div>
-                        <div class="ltn__blog-brief">
-                            <div class="ltn__blog-meta">
-                                <ul>
-                                    <li class="ltn__blog-author">
-                                        <a href="#"><i class="far fa-user"></i>by: Admin</a>
-                                    </li>
-                                    <li class="ltn__blog-tags">
-                                        <a href="#"><i class="fas fa-tags"></i>Room</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <h3 class="ltn__blog-title"><a href="blog-details.html">Renovating a Living Room? Experts Share Their Secrets</a></h3>
-                            <div class="ltn__blog-meta-btn">
-                                <div class="ltn__blog-meta">
-                                    <ul>
-                                        <li class="ltn__blog-date"><i class="far fa-calendar-alt"></i>June 24, 2021</li>
-                                    </ul>
-                                </div>
-                                <div class="ltn__blog-btn">
-                                    <a href="blog-details.html">Read more</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Blog Item -->
-                <div class="col-lg-12">
-                    <div class="ltn__blog-item ltn__blog-item-3">
-                        <div class="ltn__blog-img">
-                            <a href="blog-details.html"><img src="img/blog/5.jpg" alt="#"></a>
-                        </div>
-                        <div class="ltn__blog-brief">
-                            <div class="ltn__blog-meta">
-                                <ul>
-                                    <li class="ltn__blog-author">
-                                        <a href="#"><i class="far fa-user"></i>by: Admin</a>
-                                    </li>
-                                    <li class="ltn__blog-tags">
-                                        <a href="#"><i class="fas fa-tags"></i>Trends</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <h3 class="ltn__blog-title"><a href="blog-details.html">7 home trends that will shape your house in 2021</a></h3>
-                            <div class="ltn__blog-meta-btn">
-                                <div class="ltn__blog-meta">
-                                    <ul>
-                                        <li class="ltn__blog-date"><i class="far fa-calendar-alt"></i>June 24, 2021</li>
-                                    </ul>
-                                </div>
-                                <div class="ltn__blog-btn">
-                                    <a href="blog-details.html">Read more</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--  -->
-            </div>
-        </div>
-    </div>
-    <!-- BLOG AREA END -->
 @endsection

@@ -20,14 +20,14 @@
                                             </a>
                                         </div>
                                         <h6 class="slide-sub-title white-color--- animated"><span><i
-                                                    class="fas fa-home"></i></span> Real Estate Agency</h6>
+                                                    class="fas fa-home"></i></span> Agence immobilière</h6>
                                         <h1 class="slide-title animated ">Find Your Dream <br> House By Us</h1>
                                         <div class="slide-brief animated">
                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                                                 eiusmod tempor incididunt ut labore.</p>
                                         </div>
                                         <div class="btn-wrapper animated">
-                                            <a href="about.html" class="theme-btn-1 btn btn-effect-1">Make An
+                                            <a href="{{ route("about.afficherAbout") }}" class="theme-btn-1 btn btn-effect-1">Make An
                                                 Enquiry</a>
                                             <a class="ltn__video-play-btn bg-white"
                                                 href="https://www.youtube.com/embed/HnbMYzdjuBs?autoplay=1&amp;showinfo=0"
@@ -61,9 +61,9 @@
                                                 eiusmod tempor incididunt ut labore.</p>
                                         </div>
                                         <div class="btn-wrapper animated">
-                                            <a href="service.html" class="theme-btn-1 btn btn-effect-1">OUR
+                                            <a href="{{ route("about.afficherAbout") }}" class="theme-btn-1 btn btn-effect-1">OUR
                                                 SERVICES</a>
-                                            <a href="about.html" class="btn btn-transparent btn-effect-3">LEARN
+                                            <a href="{{ route("about.afficherAbout") }}" class="btn btn-transparent btn-effect-3">LEARN
                                                 MORE</a>
                                         </div>
                                     </div>
@@ -94,37 +94,43 @@
 
                                         <div class="ltn__car-dealer-form-item ltn__custom-icon---- ltn__icon-meter---- col-lg-5 col-md-6">
                                             <select class="nice-select" name="categorie">
-                                                <option >Property Status</option>
+                                                <option >Statut de la propriété
+                                                </option>
                                                 <option value="sale" @if (request()->get('categorie') == 'sale')
                                                     @selected(true)
-                                                @endif>Sale</option>
+                                                @endif>Vender</option>
                                                 <option value="rent_month" @if (request()->get('categorie') == 'rent_month')
                                                     @selected(true)
-                                                @endif>Rent MONTH</option>
+                                                @endif>Louer par Moins</option>
                                                 <option value="rent_day" @if (request()->get('categorie') == 'rent_day')
                                                     @selected(true)
-                                                @endif>Rent DAY</option>
+                                                @endif>Louer par Jours</option>
                                             </select>
                                         </div>
                                         <div
                                             class="ltn__car-dealer-form-item ltn__custom-icon---- ltn__icon-calendar---- col-lg-4 col-md-6">
                                             <select class="nice-select" name="sorting">
-                                                <option disabled>Default sorting</option>
+                                                <option disabled>Tri par défaut
+                                                </option>
                                                 <!-- <option>Sort by popularity</option> -->
                                                 <option value="arrivals" @if (request()->get('sorting') == 'arrivals')
                                                     @selected(true)
-                                                @endif>Sort by new arrivals</option>
+                                                @endif>Trier par nouveautés
+                                            </option>
                                                 <option value="price_low" @if (request()->get('sorting') == 'price_low')
                                                     @selected(true)
-                                                @endif>Sort by price: low to high</option>
+                                                @endif>Trier par prix : du plus bas au plus élevé
+                                            </option>
                                                 <option value="price_hight" @if (request()->get('sorting') == 'price_hight')
                                                     @selected(true)
-                                                @endif>Sort by price: high to low</option>
+                                                @endif>Trier par prix : décroissant
+                                            </option>
                                             </select>
                                         </div>
                                         <div class="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-calendar col-lg-3 col-md-6">
                                             <div class="btn-wrapper text-center mt-0">
-                                                <button type="submit" class="btn theme-btn-1 btn-effect-1 text-uppercase">Search Inventory</button>
+                                                <button type="submit" class="btn theme-btn-1 btn-effect-1 text-uppercase">Rechercher dans l'inventaire
+                                                </button>
                                                 {{-- <a href="shop-right-sidebar.html" class="btn theme-btn-1 btn-effect-1 text-uppercase">Find
                                                     Now</a> --}}
                                             </div>
@@ -396,8 +402,9 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title-area ltn__section-title-2--- text-center">
-                        <h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">NOS Services</h6>
-                        <h1 class="section-title">Notre objectif principal</h1>
+                        <h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">Our Services</h6>
+                        <h1 class="section-title">Notre objectif principal
+                        </h1>
                     </div>
                 </div>
             </div>
@@ -409,11 +416,12 @@
                             <img src="img/icons/icon-img/21.png" alt="#">
                         </div>
                         <div class="ltn__feature-info">
-                            <h3><a href="#">Buy a home</a></h3>
-                            <p>over 1 million+ homes for sale available on the website, we can match you with a
-                                house you will want to call home.</p>
-                            <a class="ltn__service-btn" href="{{route("maisons.allMaisons")}}" >Find A Home <i
-                                    class="flaticon-right-arrow"></i></a>
+                            <h3><a href="service-details.html">Acheter une maison
+                            </a></h3>
+                            <p>plus d'un million de maisons à vendre disponibles sur le site Web, nous pouvons vous jumeler avec une maison que vous voudrez appeler chez vous.
+                            </p>
+                            <a class="ltn__service-btn" href="#">Trouver une maison
+                                <i class="flaticon-right-arrow"></i></a>
                         </div>
                     </div>
                 </div>
@@ -424,11 +432,11 @@
                             <img src="img/icons/icon-img/22.png" alt="#">
                         </div>
                         <div class="ltn__feature-info">
-                            <h3><a href="#">Rent a home</a></h3>
-                            <p>over 1 million+ homes for sale available on the website, we can match you with a
-                                house you will want to call home.</p>
-                            <a class="ltn__service-btn" href="{{route("maisons.allMaisons")}}">Find A Home <i
-                                    class="flaticon-right-arrow"></i></a>
+                            <h3><a href="service-details.html">Louer une maison
+                            </a></h3>
+                            <p>plus d'un million de maisons à vendre disponibles sur le site Web, nous pouvons vous jumeler avec une maison que vous voudrez appeler chez vous.<
+                            </p>
+                            <a class="ltn__service-btn" href="#">Trouver une maison <i class="flaticon-right-arrow"></i></a>
                         </div>
                     </div>
                 </div>
@@ -439,11 +447,11 @@
                             <img src="img/icons/icon-img/23.png" alt="#">
                         </div>
                         <div class="ltn__feature-info">
-                            <h3><a href="#">Sell a home</a></h3>
-                            <p>over 1 million+ homes for sale available on the website, we can match you with a
-                                house you will want to call home.</p>
-                            <a class="ltn__service-btn" href="{{route("maisons.allMaisons")}}">Find A Home <i
-                                    class="flaticon-right-arrow"></i></a>
+                            <h3><a href="service-details.html">Vendre une maison
+                            </a></h3>
+                            <p>plus d'un million de maisons à vendre disponibles sur le site Web, nous pouvons vous jumeler avec une maison que vous voudrez appeler chez vous.
+                            </p>
+                            <a class="ltn__service-btn" href="service-details.html">Trouver une maison <i class="flaticon-right-arrow"></i></a>
                         </div>
                     </div>
                 </div>
@@ -491,7 +499,7 @@
     </div>
     <!-- BRAND LOGO AREA END -->
 
-    <!-- CALL TO ACTION START (call-to-action-6) -->
+    {{-- <!-- CALL TO ACTION START (call-to-action-6) -->
     <div class="ltn__call-to-action-area call-to-action-6 before-bg-bottom" data-bs-bg="img/1.jpg--">
         <div class="container">
             <div class="row">
@@ -511,5 +519,5 @@
             </div>
         </div>
     </div>
-    <!-- CALL TO ACTION END -->
+    <!-- CALL TO ACTION END --> --}}
 @endsection

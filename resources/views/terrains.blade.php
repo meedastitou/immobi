@@ -1,7 +1,7 @@
 @extends('layout.master')
 
 @section('main')
-    <!-- BREADCRUMB AREA START -->
+    {{-- <!-- BREADCRUMB AREA START -->
     <div class="ltn__breadcrumb-area text-left bg-overlay-white-30 bg-image " data-bs-bg="img/bg/14.jpg">
         <div class="container">
             <div class="row">
@@ -20,7 +20,7 @@
             </div>
         </div>
     </div>
-    <!-- BREADCRUMB AREA END -->
+    <!-- BREADCRUMB AREA END --> --}}
 
     <!-- PRODUCT DETAILS AREA START -->
     <div class="ltn__product-area ltn__product-gutter mb-100">
@@ -148,7 +148,7 @@
     </div>
     <!-- PRODUCT DETAILS AREA END -->
 
-    <!-- CALL TO ACTION START (call-to-action-6) -->
+    {{-- <!-- CALL TO ACTION START (call-to-action-6) -->
     <div class="ltn__call-to-action-area call-to-action-6 before-bg-bottom" data-bs-bg="img/1.jpg--">
         <div class="container">
             <div class="row">
@@ -168,5 +168,5 @@
             </div>
         </div>
     </div>
-    <!-- CALL TO ACTION END -->
+    <!-- CALL TO ACTION END --> --}}
 @endsection
