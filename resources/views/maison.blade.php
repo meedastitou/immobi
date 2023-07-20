@@ -28,8 +28,8 @@
                 @foreach ($maison_images as $image)
                     <div class="col-lg-12">
                         <div class="ltn__img-slide-item-4">
-                            <a target="_blank" href="{{ asset('storage/' . $image->lien) }}" >
-                                <img src="{{ asset('storage/' . $image->lien) }}" style="width:100%" alt="Image">
+                            <a target="_blank" href="{{ asset('upload/' . $image->lien) }}" >
+                                <img src="{{ asset('upload/' . $image->lien) }}" style="width:100%" alt="Image">
                             </a>
                         </div>
                     </div>
@@ -82,8 +82,8 @@
                         <div class="ltn__property-details-gallery mb-30">
                             <div class="row">                                    
                                     @foreach ($maison_images as $image)
-                                    <a href="{{ asset('storage/' . $image->lien) }}" data-rel="lightcase:myCollection">
-                                        <img class="mb-30" src="{{ asset('storage/' . $image->lien) }}" alt="Image">
+                                    <a href="{{ asset('upload/' . $image->lien) }}" data-rel="lightcase:myCollection">
+                                        <img class="mb-30" src="{{ asset('upload/' . $image->lien) }}" alt="Image">
                                     </a>
                                     @endforeach
                             </div>
@@ -98,9 +98,9 @@
                                     <div class="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
                                         <div class="product-img">
                                             <a href="/public/maison/{{$item->id}}"><img alt="#"
-                                                    @if ($item->capt) src="{{ asset('storage/' . $item->capt) }}"
+                                                    @if ($item->capt) src="{{ asset('upload/' . $item->capt) }}"
                                                 @else
-                                                    src=" {{ asset('storage/1946488.png') }} " @endif>
+                                                    src=" {{ asset('upload/1946488.png') }} " @endif>
                                             </a>
 
                                         </div>

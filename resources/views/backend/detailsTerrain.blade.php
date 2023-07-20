@@ -73,11 +73,11 @@
                         <div class="box_image text-center d-flex justify-content-center align-items-center"
                             style="min-height: 400px;" id="box_image">
                             <img id="DetailsimgPreview" style="max-width: 100%;"
-                                src="{{ asset('storage/' . $terrain_images[0]->lien) }}" alt="pic" />
+                                src="{{ asset('upload/' . $terrain_images[0]->lien) }}" alt="pic" />
                         </div>
                         <div id="box_list_images" class="d-flex justify-content-center mt-2">
                             @foreach ($terrain_images as $image)
-                                <img src="{{ asset('storage/' . $image->lien) }}" onclick='detailsshowImage(event)'
+                                <img src="{{ asset('upload/' . $image->lien) }}" onclick='detailsshowImage(event)'
                                     style='width:40px; margin: 0 3px; cursor: pointer;' alt="">
                             @endforeach
                         </div>

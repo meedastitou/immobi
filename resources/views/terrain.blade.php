@@ -28,8 +28,8 @@
                 @foreach ($terrain_images as $image)
                     <div class="col-lg-12">
                         <div class="ltn__img-slide-item-4">
-                            <a target="_blank" href="{{ asset('storage/' . $image->lien) }}" >
-                                <img src="{{ asset('storage/' . $image->lien) }}" style="width:100%" alt="Image">
+                            <a target="_blank" href="{{ asset('upload/' . $image->lien) }}" >
+                                <img src="{{ asset('upload/' . $image->lien) }}" style="width:100%" alt="Image">
                             </a>
                         </div>
                     </div>
@@ -58,8 +58,8 @@
                         <div class="ltn__property-details-gallery mb-30">
                             <div class="row">                                    
                                     @foreach ($terrain_images as $image)
-                                    <a href="{{ asset('storage/' . $image->lien) }}" data-rel="lightcase:myCollection">
-                                        <img class="mb-30" src="{{ asset('storage/' . $image->lien) }}" alt="Image">
+                                    <a href="{{ asset('upload/' . $image->lien) }}" data-rel="lightcase:myCollection">
+                                        <img class="mb-30" src="{{ asset('upload/' . $image->lien) }}" alt="Image">
                                     </a>
                                     @endforeach
                             </div>

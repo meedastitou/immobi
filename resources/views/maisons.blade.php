@@ -67,7 +67,7 @@
                         </div>
                         <div class="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-calendar col-lg-3 col-md-6">
                             <div class="btn-wrapper text-center mt-0">
-                                <button type="submit" class="btn theme-btn-1 btn-effect-1 text-uppercase">Search Inventory</button>
+                                <button type="submit" class="btn theme-btn-1 btn-effect-1 text-uppercase">Rechercher</button>
                                 {{-- <a href="shop-right-sidebar.html" class="btn theme-btn-1 btn-effect-1 text-uppercase">Find
                                     Now</a> --}}
                             </div>
@@ -94,11 +94,11 @@
                                         <div class="product-hover ltn__product-item-4 ltn__product-item-5 text-center--- products-items ">
                                             <div class="product-img">
                                                 <a href="/public/maison/{{$maison->id}}">
-                                                    <img alt="#"
+                                                    <img alt="alt"
                                                         @if ($maison->capt)
-                                                            src="{{ asset('storage/' . $maison->capt) }}"
+                                                            src="{{ asset('upload/' . $maison->capt) }}"
                                                         @else
-                                                            src=" {{ asset('storage/1946488.png') }} "
+                                                            src=" {{ asset('upload/1946488.png') }} "
                                                         @endif >
                                                     </a>
                                                 <div class="real-estate-agent">
@@ -122,13 +122,13 @@
 
                                                 <ul class="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief m-0 mb-1">
                                                     <li class="m-0"><span>{{ $maison->nb_chambre }}</span>
-                                                        Bedrooms
+                                                        Chambres
                                                     </li>
                                                     <li class="m-0"><span>{{ $maison->nb_douche }}</span>
-                                                        Bathrooms
+                                                        Salles de bain
                                                     </li>
                                                     <li class="m-0"><span>{{{$maison->surface_maison}}} </span>
-                                                        square Ft
+                                                        surface 
                                                     </li>
                                                 </ul>
 

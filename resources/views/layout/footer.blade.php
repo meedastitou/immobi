@@ -23,7 +23,7 @@
 <!-- CALL TO ACTION END -->
 <!-- FOOTER AREA START -->
 <footer class="ltn__footer-area  ">
-    <div class="footer-top-area  section-bg-2 plr--5">
+    <div class="footer-top-area  section-bg-2 plr--5 ">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xl-4 col-md-4 col-12 d-flex flex-column justify-content-center">
@@ -43,9 +43,9 @@
                         <h4 class="footer-title">Entreprise</h4>
                         <div class="footer-menu">
                             <ul>
-                                <li><a href="/">home</a></li>
-                                <li><a href="{{ route('about.afficherAbout') }}">About</a></li>
-                                <li><a href="{{ route('maisons.allMaisons') }}">Toutes les Maisons</a></li>
+                                <li><a href="/">Accueill</a></li>
+                                <li><a href="{{ route('about.afficherAbout') }}">à propos</a></li>
+                                <li><a href="{{ route('maisons.allMaisons') }}">Maisons</a></li>
                                 <li><a href="{{route('contact.afficherContact')}}">Contactez-nous</a></li>
                             </ul>
                         </div>
@@ -85,7 +85,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="ltn__social-media mt-20">
+                        <div class="ltn__social-media mt-20 d-flex justify-content-center">
                             <ul>
                                 <li><a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
                                 <li><a href="#" title="Youtube"><i class="fab fa-youtube"></i></a></li>

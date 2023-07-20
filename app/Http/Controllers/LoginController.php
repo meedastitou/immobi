@@ -21,6 +21,8 @@ class LoginController extends Controller
         $credentials = ['email' => $validated['email'], 'password' => $validated['password']];
         if(Auth::attempt($credentials)){
             return redirect('/maison');
+        }else{
+            return view('backend.login')->with('error', "email ou mot de passe erronee");
         }
         // var_dump(Auth::user());
     }

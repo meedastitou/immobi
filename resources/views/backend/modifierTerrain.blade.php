@@ -106,14 +106,16 @@
                     <div class="image-fluid">
                         <div class="box_image text-center d-flex justify-content-center align-items-center mb-5"
                             style="min-height: 400px;" id="box_capt">
-                            <img id="image_capt" style="max-width: 100%;"src="{{ asset('storage/' . $terrain->capt) }}"
+                            <img id="image_capt" style="max-width: 100%;"src="{{ asset('upload/' . $terrain->capt) }}"
                                 alt="pic" />
                         </div>
                         <div class="box_image text-center d-flex justify-content-center align-items-center"
                             style="min-height: 400px;" id="box_image">
-                            <img id="DetailsimgPreview"
-                                style="max-width: 100%;"src="{{ asset('storage/' . $terrain_images[0]->lien) }}"
+                            @empty($terrain_images[0]->lien)
+                                <img id="DetailsimgPreview"
+                                style="max-width: 100%;"src="{{ asset('upload/' . $terrain_images[0]->lien) }}"
                                 alt="pic" />
+                            @endempty
                         </div>
 
                         <div id="box_list_images" class="d-flex justify-content-center mt-2">
@@ -124,7 +126,7 @@
                                         @csrf
                                         @method('delete')
                                     </form>
-                                    <img src="{{ asset('storage/' . $image->lien) }}" onclick='detailsshowImage(event)'
+                                    <img src="{{ asset('upload/' . $image->lien) }}" onclick='detailsshowImage(event)'
                                         class="img-responsive" style="max-height: 100px; max-width: 100px;"
                                         alt="" srcset="">
                                 </div>

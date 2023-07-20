@@ -351,8 +351,8 @@
             15. Slider One Active 
         --------------------------------------------------------- */
         $('.ltn__slide-one-active').slick({
-            autoplay: false,
-            autoplaySpeed: 2000,
+            autoplay: true,
+            autoplaySpeed: 5000,
             arrows: true,
             dots: true,
             fade: true,

@@ -21,17 +21,19 @@
     <!-- BREADCRUMB AREA END --> --}}
 
     <!-- ABOUT US AREA START -->
-    <div class="ltn__about-us-area pt-120--- pb-90 mt--30">
+    <div class="ltn__about-us-area pt-120 pb-90 ">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 align-self-center">
                     <div class="about-us-img-wrap about-img-left">
-                        <img src="img/others/13.png" alt="About Us Image">
+                        <img src="img/others/7.png" alt="About Us Image">
                         <div class="about-us-img-info about-us-img-info-2 about-us-img-info-3">
-                            
+
                             <div class="ltn__video-img ltn__animation-pulse1">
                                 <img src="img/others/8.png" alt="video popup bg image">
-                                <a class="ltn__video-icon-2 ltn__video-icon-2-border---" href="https://www.youtube.com/embed/X7R-q9rsrtU?autoplay=1&amp;showinfo=0"  data-rel="lightcase:myCollection">
+                                <a class="ltn__video-icon-2 ltn__video-icon-2-border---"
+                                    href="https://www.youtube.com/embed/X7R-q9rsrtU?autoplay=1&amp;showinfo=0"
+                                    data-rel="lightcase:myCollection">
                                     <i class="fa fa-play"></i>
                                 </a>
                             </div>
@@ -41,36 +43,37 @@
                 <div class="col-lg-6 align-self-center">
                     <div class="about-us-info-wrap">
                         <div class="section-title-area ltn__section-title-2--- mb-20">
-                            <h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">About Us</h6>
-                            <h1 class="section-title">The Leading Real Estate
-                                Rental Marketplace<span>.</span></h1>
-                            <p>Over 39,000 people work for us in more than 70 countries all over the
-                                This breadth of global coverage, combined with specialist services</p>
+                            <h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">à Propos de Nous</h6>
+                            <h1 class="section-title">Le leader du marché de la location immobilière.<span>.</span></h1>
+                            <p>Que vous souhaitiez acheter, vendre ou louer un bien immobilier à Moulay Bousselham et dans ses environs, 
+                                notre agence est là pour vous offrir un service personnalisé et adapté à vos besoins. 
+                                Nous disposons d'un vaste portefeuille de biens immobiliers de qualité, 
+                                comprenant des appartements, des villas, des bureaux, des commerces et des terrains.</p>
                         </div>
                         <ul class="ltn__list-item-half clearfix">
                             <li>
                                 <i class="flaticon-home-2"></i>
-                                Smart Home Design
+                                Conception de maison intelligente
                             </li>
                             <li>
                                 <i class="flaticon-mountain"></i>
-                                Beautiful Scene Around
+                                Belle scène autour
                             </li>
                             <li>
                                 <i class="flaticon-heart"></i>
-                                Exceptional Lifestyle
+                                Style de vie exceptionnel
                             </li>
                             <li>
                                 <i class="flaticon-secure"></i>
-                                Complete 24/7 Security
+                                Sécurité complète 24h/24 et 7j/7
                             </li>
                         </ul>
                         <div class="ltn__callout bg-overlay-theme-05  mt-30">
-                            <p>"Enimad minim veniam quis nostrud exercitation <br>
-                                llamco laboris. Lorem ipsum dolor sit amet" </p>
+                            <p>"Enimad minim veniam quis nostrud exercitation llamco laboris.<br>
+                                 Lorem ipsum dolor sit amet" </p>
                         </div>
                         <div class="btn-wrapper animated">
-                            <a href="service.html" class="theme-btn-1 btn btn-effect-1">OUR SERVICES</a>
+                            <a href="{{ route("about.afficherAbout") }}" class="theme-btn-1 btn btn-effect-1">NOS SERVICES</a>
                         </div>
                     </div>
                 </div>
@@ -92,7 +95,7 @@
                 </div>
             </div>
             <div class="row ltn__custom-gutter--- justify-content-center">
-                <div class="col-lg-4 col-sm-6 col-12">
+                <div class="col-lg-4 col-sm-6 col-12 ">
                     <div class="ltn__feature-item ltn__feature-item-6 text-center bg-white  box-shadow-1">
                         <div class="ltn__feature-icon">
                             <!-- <span><i class="flaticon-house"></i></span> -->
@@ -101,7 +104,7 @@
                         <div class="ltn__feature-info">
                             <h3><a href="service-details.html">Acheter une maison
                             </a></h3>
-                            <p>plus d'un million de maisons à vendre disponibles sur le site Web, nous pouvons vous jumeler avec une maison que vous voudrez appeler chez vous.
+                            <p>Notre agence immobilière vous accompagne dans votre projet d'achat immobilier à Moulay Bousselham et dans ses environs. 
                             </p>
                             <a class="ltn__service-btn" href="#">Trouver une maison
                                 <i class="flaticon-right-arrow"></i></a>
@@ -117,7 +120,7 @@
                         <div class="ltn__feature-info">
                             <h3><a href="service-details.html">Louer une maison
                             </a></h3>
-                            <p>plus d'un million de maisons à vendre disponibles sur le site Web, nous pouvons vous jumeler avec une maison que vous voudrez appeler chez vous.<
+                            <p>Nous vous offrons un service personnalisé pour trouver la location idéale qui répondra à vos besoins et à votre style de vie.
                             </p>
                             <a class="ltn__service-btn" href="#">Trouver une maison <i class="flaticon-right-arrow"></i></a>
                         </div>
@@ -132,7 +135,7 @@
                         <div class="ltn__feature-info">
                             <h3><a href="service-details.html">Vendre une maison
                             </a></h3>
-                            <p>plus d'un million de maisons à vendre disponibles sur le site Web, nous pouvons vous jumeler avec une maison que vous voudrez appeler chez vous.
+                            <p>Faites confiance à notre équipe expérimentée pour vous accompagner dans toutes les étapes de la vente et obtenir les meilleurs résultats."
                             </p>
                             <a class="ltn__service-btn" href="service-details.html">Trouver une maison <i class="flaticon-right-arrow"></i></a>
                         </div>

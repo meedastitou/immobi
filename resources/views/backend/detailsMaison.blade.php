@@ -84,12 +84,15 @@
             
             <div class="holder col-xl-5">
               <div class="image-fluid">
+                <div class="box_image text-center d-flex justify-content-center align-items-center mb-5" style="min-height: 400px;" id="box_capt">
+                  <img id="image_capt" style="max-width: 100%;"src="{{ asset('upload/' . $maison->capt) }}" alt="pic" />
+                </div>
                 <div class="box_image text-center d-flex justify-content-center align-items-center" style="min-height: 400px;" id="box_image">
-                  <img id="DetailsimgPreview" style="max-width: 100%;" src="{{ asset('storage/' . $maison_images[0]->lien) }}" alt="pic" />
+                  <img id="DetailsimgPreview" style="max-width: 100%;" src="{{ asset('upload/' . $maison_images[0]->lien) }}" alt="pic" />
                 </div>
                 <div id="box_list_images" class="d-flex justify-content-center mt-2">
                   @foreach ($maison_images as $image)
-                  <img src="{{ asset('storage/' . $image->lien) }}" onclick='detailsshowImage(event)' style='width:40px; margin: 0 3px; cursor: pointer;' alt="">
+                  <img src="{{ asset('upload/' . $image->lien) }}" onclick='detailsshowImage(event)' style='width:40px; margin: 0 3px; cursor: pointer;' alt="">
                 @endforeach
                 </div>
               </div>

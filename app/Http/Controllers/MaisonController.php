@@ -54,7 +54,10 @@ class MaisonController extends Controller
         
         $image_capt = '';
         if ($request->hasFile('capt')) {
-            $image_capt = $request->file('capt')->store('images', 'images');
+            $destinationPath = 'upload';
+            $image_capt = $request->file('capt')->getClientOriginalName();
+            $request->file('capt')->move(public_path($destinationPath), $image_capt);
+            // $image_capt = $request->file('capt')->store('images', 'images');
         }
         $maison= Maison::create([
                     'titre' => $titre,
@@ -81,8 +84,13 @@ class MaisonController extends Controller
         $imagePaths = [];
         if ($request->hasFile('images')) {
             foreach ($request->file('images') as $image) {  
-                $imagePath = $image->store('images', 'images');
-                $imagePaths[] = $imagePath;
+                // $imagePath = $image->store('/public/upload', 'images');
+                // $imagePaths[] = $imagePath;
+
+                $destinationPath = 'upload';
+                $myimage = $image->getClientOriginalName();
+                $image->move(public_path($destinationPath), $myimage);
+                $imagePaths[] = $myimage;
             }
         }
        
@@ -119,7 +127,11 @@ class MaisonController extends Controller
             if (File::exists("images/".$maison->capt)) {
                 File::delete("images/".$maison->capt);
             }
-            $image_capt = $request->file('capt')->store('images', 'images');
+            $destinationPath = 'upload';
+            $image_capt = $request->file('capt')->getClientOriginalName();
+            $request->file('capt')->move(public_path($destinationPath), $image_capt);
+            
+            // $image_capt = $request->file('capt')->store('images', 'images');
             $maison->capt           = $image_capt;
         }
 
@@ -142,8 +154,12 @@ class MaisonController extends Controller
         $imagePaths = [];
         if ($request->hasFile('images')) {
             foreach ($request->file('images') as $image) {  
-                $imagePath = $image->store('images', 'images');
-                $imagePaths[] = $imagePath;
+                // $imagePath = $image->store('images', 'images');
+                // $imagePaths[] = $imagePath;
+                $destinationPath = 'upload';
+                $myimage = $image->getClientOriginalName();
+                $image->move(public_path($destinationPath), $myimage);
+                $imagePaths[] = $myimage;
             }
         }
        

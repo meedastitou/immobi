@@ -67,21 +67,25 @@
                             </select>
                         </div>
                         <div
-                            class="ltn__car-dealer-form-item ltn__custom-icon---- ltn__icon-calendar---- col-lg-4 col-md-6">
-                            <select class="nice-select" name="sorting">
-                                <option disabled>Default sorting</option>
-                                <!-- <option>Sort by popularity</option> -->
-                                <option value="arrivals" @if (request()->get('sorting') == 'arrivals')
-                                    @selected(true)
-                                @endif>Sort by new arrivals</option>
-                                <option value="price_low" @if (request()->get('sorting') == 'price_low')
-                                    @selected(true)
-                                @endif>Sort by price: low to high</option>
-                                <option value="price_hight" @if (request()->get('sorting') == 'price_hight')
-                                    @selected(true)
-                                @endif>Sort by price: high to low</option>
-                            </select>
-                        </div>
+                        class="ltn__car-dealer-form-item ltn__custom-icon---- ltn__icon-calendar---- col-lg-4 col-md-6">
+                        <select class="nice-select" name="sorting">
+                            <option disabled>Tri par défaut
+                            </option>
+                            <!-- <option>Sort by popularity</option> -->
+                            <option value="arrivals" @if (request()->get('sorting') == 'arrivals')
+                                @selected(true)
+                            @endif>Trier par nouveautés
+                        </option>
+                            <option value="price_low" @if (request()->get('sorting') == 'price_low')
+                                @selected(true)
+                            @endif>Trier par prix : du plus bas au plus élevé
+                        </option>
+                            <option value="price_hight" @if (request()->get('sorting') == 'price_hight')
+                                @selected(true)
+                            @endif>Trier par prix : décroissant
+                        </option>
+                        </select>
+                    </div>
                         <div class="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-calendar col-lg-3 col-md-6">
                             <div class="btn-wrapper text-center mt-0">
                                 <button type="submit" class="btn theme-btn-1 btn-effect-1 text-uppercase">Search Inventory</button>
@@ -113,9 +117,9 @@
                                                 <a href="/public/terrain/{{$terrain->id}}">
                                                     <img alt="#"
                                                         @if ($terrain->capt)
-                                                            src="{{ asset('storage/' . $terrain->capt) }}"
+                                                            src="{{ asset('upload/' . $terrain->capt) }}"
                                                         @else
-                                                            src=" {{ asset('storage/1946488.png') }} "
+                                                            src=" {{ asset('upload/1946488.png') }} "
                                                         @endif >
                                                     </a>
                                                 <div class="real-estate-agent">

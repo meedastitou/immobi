@@ -11652,8 +11652,8 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 }
 
 .ltn__category-item-4 .ltn__category-item-img {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   line-height: 115px;
   font-size: 45px;
   border-radius: 100%;
@@ -11663,7 +11663,10 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   margin-right: 0;
   margin-left: auto;
 }
-
+.ltn__category-item-4 .ltn__category-item-img img{
+  height: 100%;
+  border-radius: 16px;
+}
 .ltn__category-item-4 .ltn__category-item-name {
   padding: 25px 0px 15px;
 }

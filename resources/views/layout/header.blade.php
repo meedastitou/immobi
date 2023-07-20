@@ -90,7 +90,7 @@
                                             <li class="menu-icon"><a href="{{ route('maisons.allMaisons') }}">Maisons
                                                 </a>
                                                 <ul>
-                                                    <li><a href="#">maison à louer<span
+                                                    <li><a href="#">Maison à louer<span
                                                                 class="float-end">>></span></a>
                                                         <ul>
                                                             <li>
@@ -107,7 +107,7 @@
                                                     </li>
                                                     <li><a
                                                             href="{{ route('maisons.allMaisons', ['categorie' => 'sale', 'sorting' => 'price_hight']) }}">Maisons
-                                                            à acheter</a></li>
+                                                            à vender</a></li>
                                                 </ul>
                                             </li>
                                             <li class=""><a href="{{ route('terrains.allTerrains') }}">Terrains
@@ -115,7 +115,7 @@
                                             <li class=""><a
                                                     href="{{ route('activites.afficherActivites') }}">Activities</a>
                                             </li>
-                                            <li class=""><a href="{{ route('about.afficherAbout') }}">About</a>
+                                            <li class=""><a href="{{ route('about.afficherAbout') }}">à propos</a>
                                             </li>
                                             <li><a href="{{ route('contact.afficherContact') }}">Contact</a>
                                             </li>
@@ -165,7 +165,7 @@
                         </li>
                         <li><a
                                 href="{{ route('maisons.allMaisons', ['categorie' => 'sale', 'sorting' => 'price_hight']) }}">Maisons
-                                à acheter</a></li>
+                                à vender</a></li>
                         </li>
                         <li>
 
@@ -174,7 +174,7 @@
 
                         <li class=""><a href="{{ route('activites.afficherActivites') }}">Activities</a>
                         </li>
-                        <li><a href="{{ route('about.afficherAbout') }}">About</a></li>
+                        <li><a href="{{ route('about.afficherAbout') }}">à propos</a></li>
 
                         <li><a href="{{ route('contact.afficherContact') }}">Contact</a></li>
                     </ul>

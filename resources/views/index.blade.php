@@ -4,7 +4,7 @@
     <!-- SLIDER AREA START (slider-3) -->
     <div class="ltn__slider-area ltn__slider-3  section-bg-1">
         <div class="ltn__slide-one-active slick-slide-arrow-1 slick-slide-dots-1">
-            <!-- ltn__slide-item -->
+            <!-- ltn__slide-item --> 
             <div class="ltn__slide-item ltn__slide-item-2 ltn__slide-item-3-normal ltn__slide-item-3">
                 <div class="ltn__slide-item-inner">
                     <div class="container">
@@ -21,14 +21,14 @@
                                         </div>
                                         <h6 class="slide-sub-title white-color--- animated"><span><i
                                                     class="fas fa-home"></i></span> Agence immobilière</h6>
-                                        <h1 class="slide-title animated ">Find Your Dream <br> House By Us</h1>
+                                        <h1 class="slide-title animated ">1ére agence immobilière à moulay bousselham</h1>
+                                        
                                         <div class="slide-brief animated">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                                                eiusmod tempor incididunt ut labore.</p>
+                                            <p>Confier la location de vos biens à notre agence, c'est passer
+                                                plus de temps avec votre famille .</p>
                                         </div>
                                         <div class="btn-wrapper animated">
-                                            <a href="{{ route("about.afficherAbout") }}" class="theme-btn-1 btn btn-effect-1">Make An
-                                                Enquiry</a>
+                                            <a href="{{ route("about.afficherAbout") }}" class="theme-btn-1 btn btn-effect-1">Faire une enquête</a>
                                             <a class="ltn__video-play-btn bg-white"
                                                 href="https://www.youtube.com/embed/HnbMYzdjuBs?autoplay=1&amp;showinfo=0"
                                                 data-rel="lightcase">
@@ -38,7 +38,7 @@
                                     </div>
                                 </div>
                                 <div class="slide-item-img">
-                                    <img src="img/slider/21.png" alt="#">
+                                    <img src="img/Moulaybousselham.jpg" alt="#">
                                 </div>
                             </div>
                         </div>
@@ -46,7 +46,7 @@
                 </div>
             </div>
             <!-- ltn__slide-item -->
-            <div class="ltn__slide-item ltn__slide-item-2  ltn__slide-item-3-normal ltn__slide-item-3">
+            <div class="ltn__slide-item ltn__slide-item-2 ltn__slide-item-3-normal ltn__slide-item-3">
                 <div class="ltn__slide-item-inner  text-right text-end">
                     <div class="container">
                         <div class="row">
@@ -54,22 +54,21 @@
                                 <div class="slide-item-info">
                                     <div class="slide-item-info-inner ltn__slide-animation">
                                         <h6 class="slide-sub-title white-color--- animated"><span><i
-                                                    class="fas fa-home"></i></span> Real Estate Agency</h6>
-                                        <h1 class="slide-title animated ">The Right Place <br>of House Finding</h1>
+                                                    class="fas fa-home"></i></span> Agence immobilière</h6>
+                                        <h1 class="slide-title animated ">Pourquoi MoulayBousselham immobilier ?</h1>
                                         <div class="slide-brief animated">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                                                eiusmod tempor incididunt ut labore.</p>
+                                            <p>Mettez en valeur votre bien immobilier via le
+                                                Digital. Gagnez en visibilité et en pertinence.</p>
                                         </div>
                                         <div class="btn-wrapper animated">
                                             <a href="{{ route("about.afficherAbout") }}" class="theme-btn-1 btn btn-effect-1">OUR
                                                 SERVICES</a>
-                                            <a href="{{ route("about.afficherAbout") }}" class="btn btn-transparent btn-effect-3">LEARN
-                                                MORE</a>
+                                            <a href="{{ route("about.afficherAbout") }}" class="btn btn-transparent btn-effect-3">apprendre encore plus</a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="slide-item-img slide-img-left">
-                                    <img src="img/slider/21.png" alt="#">
+                                    <img src="img/Moulaybousselham.jpg" alt="#">
                                 </div>
                             </div>
                         </div>
@@ -169,10 +168,12 @@
                 <div class="col-lg-6 align-self-center">
                     <div class="about-us-info-wrap">
                         <div class="section-title-area ltn__section-title-2--- mb-20">
-                            <h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">About Us</h6>
+                            <h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">à Propos de Nous</h6>
                             <h1 class="section-title">Le leader du marché de la location immobilière.<span>.</span></h1>
-                            <p>Plus de 39 000 personnes travaillent pour nous dans plus de 70 pays à travers le monde Cette étendue de couverture mondiale,
-                                 associée à des services spécialisés</p>
+                            <p>Que vous souhaitiez acheter, vendre ou louer un bien immobilier à Moulay Bousselham et dans ses environs, 
+                                notre agence est là pour vous offrir un service personnalisé et adapté à vos besoins. 
+                                Nous disposons d'un vaste portefeuille de biens immobiliers de qualité, 
+                                comprenant des appartements, des villas, des bureaux, des commerces et des terrains.</p>
                         </div>
                         <ul class="ltn__list-item-half clearfix">
                             <li>
@@ -224,9 +225,9 @@
                             <div class="product-img">
                                 <a href="/public/maison/{{ $maison->id }}">
                                     <img alt="#"
-                                        @if ($maison->capt) src="{{ asset('storage/' . $maison->capt) }}"
+                                        @if ($maison->capt) src="{{ asset('upload/' . $maison->capt) }}"
                                 @else
-                                    src=" {{ asset('storage/1946488.png') }} " @endif>
+                                    src=" {{ asset('upload/1946488.png') }} " @endif>
                                 </a>
                                 <div class="product-badge">
                                     <ul>
@@ -288,113 +289,143 @@
         </div>
     </div>
     <!-- PRODUCT SLIDER AREA END -->
-    <!-- CATEGORY AREA START -->
-    <div class="ltn__category-area section-bg-1-- ltn__primary-bg before-bg-1 bg-image bg-overlay-theme-black-5--0 pt-115 pb-90"
-    data-bs-bg="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pralognan.com%2Factivites%2Factivites-ete%2F&psig=AOvVaw2cZX_zhAcugPgyWL75A5ac&ust=1687431691461000&source=images&cd=vfe&ved=0CA4QjRxqFwoTCIjwgYib1P8CFQAAAAAdAAAAABAE">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title-area ltn__section-title-2 text-center">
-                        <h1 class="section-title white-color">Les Activités à Faire ...</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="row ltn__category-slider-active slick-arrow-1">
-                <div class="col-12">
-                    <div class="ltn__category-item ltn__category-item-4 text-center">
-                        <div class="ltn__category-item-img">
-                            <a href="shop.html">
-                                <i class="flaticon-car"></i>
-                            </a>
-                        </div>
-                        <div class="ltn__category-item-name">
-                            <h4><a href="shop.html">Parking Space</a></h4>
-                        </div>
-                        <div class="ltn__category-item-btn">
-                            <a href="shop.html"><i class="flaticon-right-arrow"></i></a>
-                        </div>
-                    </div>
+   <!-- CATEGORY AREA START -->
+   <div class="ltn__category-area section-bg-1-- ltn__primary-bg before-bg-1 bg-image bg-overlay-theme-black-5--0 pt-115 pb-90"
+   data-bs-bg="img/activities/capt.jpeg">
+   <div class="container">
+       <div class="row">
+           <div class="col-lg-12">
+               <div class="section-title-area ltn__section-title-2 text-center">
+                   <h1 class="section-title white-color">Les Activités a Faire ...</h1>
+               </div>
+           </div>
+       </div>
+       <div class="row ltn__category-slider-active slick-arrow-1">
+           <div class="col-12">
+               <div class="ltn__category-item ltn__category-item-4 text-center">
+                   <div class="ltn__category-item-img">
+                       <a href="#">
+                           <img src="img/activities/Kayak.jfif     " alt="" srcset="">
+                       </a>
+                   </div>
+                   <div class="ltn__category-item-name">
+                       <h4><a href="#">KAYAK</a></h4>
+                   </div>
+                   <div class="ltn__category-item-btn">
+                       <a href="#"><i class="flaticon-right-arrow"></i></a>
+                   </div>
+               </div>
 
-                </div>
-                <div class="col-12">
-                    <div class="ltn__category-item ltn__category-item-4 text-center">
-                        <div class="ltn__category-item-img">
-                            <a href="shop.html">
-                                <i class="flaticon-car"></i>
-                            </a>
-                        </div>
-                        <div class="ltn__category-item-name">
-                            <h4><a href="shop.html">Parking Space</a></h4>
-                        </div>
-                        <div class="ltn__category-item-btn">
-                            <a href="shop.html"><i class="flaticon-right-arrow"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="ltn__category-item ltn__category-item-4 text-center">
-                        <div class="ltn__category-item-img">
-                            <a href="shop.html">
-                                <i class="flaticon-car"></i>
-                            </a>
-                        </div>
-                        <div class="ltn__category-item-name">
-                            <h4><a href="shop.html">Parking Space</a></h4>
-                        </div>
-                        <div class="ltn__category-item-btn">
-                            <a href="shop.html"><i class="flaticon-right-arrow"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="ltn__category-item ltn__category-item-4 text-center">
-                        <div class="ltn__category-item-img">
-                            <a href="shop.html">
-                                <i class="flaticon-car"></i>
-                            </a>
-                        </div>
-                        <div class="ltn__category-item-name">
-                            <h4><a href="shop.html">Parking Space</a></h4>
-                        </div>
-                        <div class="ltn__category-item-btn">
-                            <a href="shop.html"><i class="flaticon-right-arrow"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="ltn__category-item ltn__category-item-4 text-center">
-                        <div class="ltn__category-item-img">
-                            <a href="shop.html">
-                                <i class="flaticon-car"></i>
-                            </a>
-                        </div>
-                        <div class="ltn__category-item-name">
-                            <h4><a href="shop.html">Parking Space</a></h4>
-                        </div>
-                        <div class="ltn__category-item-btn">
-                            <a href="shop.html"><i class="flaticon-right-arrow"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="ltn__category-item ltn__category-item-4 text-center">
-                        <div class="ltn__category-item-img">
-                            <a href="shop.html">
-                                <i class="flaticon-car"></i>
-                            </a>
-                        </div>
-                        <div class="ltn__category-item-name">
-                            <h4><a href="shop.html">Parking Space</a></h4>
-                        </div>
-                        <div class="ltn__category-item-btn">
-                            <a href="shop.html"><i class="flaticon-right-arrow"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- CATEGORY AREA END -->
+           </div>
+           <div class="col-12">
+               <div class="ltn__category-item ltn__category-item-4 text-center">
+                   <div class="ltn__category-item-img">
+                       <a href="#">
+                           <img src="img/activities/BALADE EN BATEAU.jpg" alt="" srcset="">
+                       </a>
+                   </div>
+                   <div class="ltn__category-item-name">
+                       <h4><a href="#">BALADE EN BATEAU</a></h4>
+                   </div>
+                   <div class="ltn__category-item-btn">
+                       <a href="#"><i class="flaticon-right-arrow"></i></a>
+                   </div>
+               </div>
+           </div>
+           <div class="col-12">
+               <div class="ltn__category-item ltn__category-item-4 text-center">
+                   <div class="ltn__category-item-img">
+                       <a href="#">
+                           <img src="img/activities/SORTE DE PECHE.jpg" alt="" srcset="">
+                       </a>
+                   </div>
+                   <div class="ltn__category-item-name">
+                       <h4><a href="#">SORTiE DE PECHE</a></h4>
+                   </div>
+                   <div class="ltn__category-item-btn">
+                       <a href="#"><i class="flaticon-right-arrow"></i></a>
+                   </div>
+               </div>
+           </div>
+           <div class="col-12">
+               <div class="ltn__category-item ltn__category-item-4 text-center">
+                   <div class="ltn__category-item-img">
+                       <a href="#">
+                           <img src="img/activities/SORTIE EN QUAD.jpg" alt="" srcset="">
+                       </a>
+                   </div>
+                   <div class="ltn__category-item-name">
+                       <h4><a href="#">SORTIE EN QUAD</a></h4>
+                   </div>
+                   <div class="ltn__category-item-btn">
+                       <a href="#"><i class="flaticon-right-arrow"></i></a>
+                   </div>
+               </div>
+           </div>
+           <div class="col-12">
+               <div class="ltn__category-item ltn__category-item-4 text-center">
+                   <div class="ltn__category-item-img">
+                       <a href="#">
+                           <img src="img/activities/ACTIVITE NAUTIQUE.jpg" alt="" srcset="">
+                       </a>
+                   </div>
+                   <div class="ltn__category-item-name">
+                       <h4><a href="#">ACTIVITE NAUTIQUE</a></h4>
+                   </div>
+                   <div class="ltn__category-item-btn">
+                       <a href="#"><i class="flaticon-right-arrow"></i></a>
+                   </div>
+               </div>
+           </div>
+           <div class="col-12">
+               <div class="ltn__category-item ltn__category-item-4 text-center">
+                   <div class="ltn__category-item-img">
+                       <a href="#">
+                           <img src="img/activities/PARAPENT.jpg" alt="" srcset="">
+                       </a>
+                   </div>
+                   <div class="ltn__category-item-name">
+                       <h4><a href="#">PARAPENT</a></h4>
+                   </div>
+                   <div class="ltn__category-item-btn">
+                       <a href="#"><i class="flaticon-right-arrow"></i></a>
+                   </div>
+               </div>
+           </div>
+           <div class="col-12">
+               <div class="ltn__category-item ltn__category-item-4 text-center">
+                   <div class="ltn__category-item-img">
+                       <a href="#">
+                           <img src="img/activities/STAGE DE YOGA.jpg" alt="" srcset="">
+                       </a>
+                   </div>
+                   <div class="ltn__category-item-name">
+                       <h4><a href="#">STAGE DE YOGA</a></h4>
+                   </div>
+                   <div class="ltn__category-item-btn">
+                       <a href="#"><i class="flaticon-right-arrow"></i></a>
+                   </div>
+               </div>
+           </div>
+           <div class="col-12">
+               <div class="ltn__category-item ltn__category-item-4 text-center">
+                   <div class="ltn__category-item-img">
+                       <a href="#">
+                           <img src="img/activities/GROUPES DE MUSICIENS.jpg" alt="" srcset="">
+                       </a>
+                   </div>
+                   <div class="ltn__category-item-name">
+                       <h4><a href="#">GROUPES DE MUSICIENS <br> "sur DEMANDE"</a></h4>
+                   </div>
+                   <div class="ltn__category-item-btn">
+                       <a href="#"><i class="flaticon-right-arrow"></i></a>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+</div>
+<!-- CATEGORY AREA END -->
 
     <!-- FEATURE AREA START ( Feature - 6) -->
     <div class="ltn__feature-area section-bg-1 pt-120 pb-90 mb-120---">
@@ -402,14 +433,14 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title-area ltn__section-title-2--- text-center">
-                        <h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">Our Services</h6>
+                        <h6 class="section-subtitle section-subtitle-2 ltn__secondary-color">Nos Services</h6>
                         <h1 class="section-title">Notre objectif principal
                         </h1>
                     </div>
                 </div>
             </div>
             <div class="row ltn__custom-gutter--- justify-content-center">
-                <div class="col-lg-4 col-sm-6 col-12">
+                <div class="col-lg-4 col-sm-6 col-12 ">
                     <div class="ltn__feature-item ltn__feature-item-6 text-center bg-white  box-shadow-1">
                         <div class="ltn__feature-icon">
                             <!-- <span><i class="flaticon-house"></i></span> -->
@@ -418,7 +449,7 @@
                         <div class="ltn__feature-info">
                             <h3><a href="service-details.html">Acheter une maison
                             </a></h3>
-                            <p>plus d'un million de maisons à vendre disponibles sur le site Web, nous pouvons vous jumeler avec une maison que vous voudrez appeler chez vous.
+                            <p>Notre agence immobilière vous accompagne dans votre projet d'achat immobilier à Moulay Bousselham et dans ses environs. 
                             </p>
                             <a class="ltn__service-btn" href="#">Trouver une maison
                                 <i class="flaticon-right-arrow"></i></a>
@@ -434,7 +465,7 @@
                         <div class="ltn__feature-info">
                             <h3><a href="service-details.html">Louer une maison
                             </a></h3>
-                            <p>plus d'un million de maisons à vendre disponibles sur le site Web, nous pouvons vous jumeler avec une maison que vous voudrez appeler chez vous.<
+                            <p>Nous vous offrons un service personnalisé pour trouver la location idéale qui répondra à vos besoins et à votre style de vie.
                             </p>
                             <a class="ltn__service-btn" href="#">Trouver une maison <i class="flaticon-right-arrow"></i></a>
                         </div>
@@ -449,7 +480,7 @@
                         <div class="ltn__feature-info">
                             <h3><a href="service-details.html">Vendre une maison
                             </a></h3>
-                            <p>plus d'un million de maisons à vendre disponibles sur le site Web, nous pouvons vous jumeler avec une maison que vous voudrez appeler chez vous.
+                            <p>Faites confiance à notre équipe expérimentée pour vous accompagner dans toutes les étapes de la vente et obtenir les meilleurs résultats."
                             </p>
                             <a class="ltn__service-btn" href="service-details.html">Trouver une maison <i class="flaticon-right-arrow"></i></a>
                         </div>

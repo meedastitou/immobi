@@ -47,7 +47,10 @@ class TerrainController extends Controller
         
         $image_capt = '';
         if ($request->hasFile('capt')) {
-            $image_capt = $request->file('capt')->store('images', 'images');
+            // $image_capt = $request->file('capt')->store('images', 'images');
+            $destinationPath = 'upload';
+            $image_capt = $request->file('capt')->getClientOriginalName();
+            $request->file('capt')->move(public_path($destinationPath), $image_capt);
         }
         $terrain= Terrain::create([
                     'titre' => $titre,
@@ -64,8 +67,12 @@ class TerrainController extends Controller
         $imagePaths = [];
         if ($request->hasFile('images')) {
             foreach ($request->file('images') as $image) {  
-                $imagePath = $image->store('images', 'images');
-                $imagePaths[] = $imagePath;
+                // $imagePath = $image->store('images', 'images');
+                // $imagePaths[] = $imagePath;
+                $destinationPath = 'upload';
+                $myimage = $image->getClientOriginalName();
+                $image->move(public_path($destinationPath), $myimage);
+                $imagePaths[] = $myimage;
             }
         }
        
@@ -104,7 +111,10 @@ class TerrainController extends Controller
             if (File::exists("images/".$terrain->capt)) {
                 File::delete("images/".$terrain->capt);
             }
-            $image_capt = $request->file('capt')->store('images', 'images');
+            $destinationPath = 'upload';
+            $image_capt = $request->file('capt')->getClientOriginalName();
+            $request->file('capt')->move(public_path($destinationPath), $image_capt);
+            // $image_capt = $request->file('capt')->store('images', 'images');
             $terrain->capt           = $image_capt;
         }
 
@@ -122,8 +132,12 @@ class TerrainController extends Controller
         $imagePaths = [];
         if ($request->hasFile('images')) {
             foreach ($request->file('images') as $image) {  
-                $imagePath = $image->store('images', 'images');
-                $imagePaths[] = $imagePath;
+                $destinationPath = 'upload';
+                $myimage = $image->getClientOriginalName();
+                $image->move(public_path($destinationPath), $myimage);
+                $imagePaths[] = $myimage;
+                // $imagePath = $image->store('images', 'images');
+                // $imagePaths[] = $imagePath;
             }
         }
        
