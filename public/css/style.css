@@ -2226,7 +2226,7 @@ ul {
 }
 
 .pt-120 {
-  padding-top: 120px;
+  padding-top: 250px;
 }
 
 .pt-122 {
@@ -8074,7 +8074,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 }
 
 .ltn__slide-item-2 .slide-title {
-  font-size: 65px;
+  font-size: 58px;
   line-height: 1;
   margin-bottom: 20px;
 }
@@ -19488,4 +19488,9 @@ ul.pagination li:last-child a{
   border: 1px solid var(--ltn__secondary-color);
   color: #fff;
   background-color: var(--ltn__secondary-color);
+}
+
+.slide-item-img img{
+  /* border-radius: 40px; */
+  margin: 0 auto;
 }

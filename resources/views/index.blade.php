@@ -21,7 +21,7 @@
                                         </div>
                                         <h6 class="slide-sub-title white-color--- animated"><span><i
                                                     class="fas fa-home"></i></span> Agence immobilière</h6>
-                                        <h1 class="slide-title animated ">1ére agence immobilière à moulay bousselham</h1>
+                                        <h1 class="slide-title animated ">Agence Immobilière à Moulay Bousselham</h1>
                                         
                                         <div class="slide-brief animated">
                                             <p>Confier la location de vos biens à notre agence, c'est passer
@@ -38,7 +38,7 @@
                                     </div>
                                 </div>
                                 <div class="slide-item-img">
-                                    <img src="img/Moulaybousselham.jpg" alt="#">
+                                    <img src="img/imo124.png"  alt="#">
                                 </div>
                             </div>
                         </div>
@@ -47,7 +47,7 @@
             </div>
             <!-- ltn__slide-item -->
             <div class="ltn__slide-item ltn__slide-item-2 ltn__slide-item-3-normal ltn__slide-item-3">
-                <div class="ltn__slide-item-inner  text-right text-end">
+                <div class="ltn__slide-item-inner ">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12 align-self-center">
@@ -55,7 +55,7 @@
                                     <div class="slide-item-info-inner ltn__slide-animation">
                                         <h6 class="slide-sub-title white-color--- animated"><span><i
                                                     class="fas fa-home"></i></span> Agence immobilière</h6>
-                                        <h1 class="slide-title animated ">Pourquoi MoulayBousselham immobilier ?</h1>
+                                        <h1 class="slide-title animated ">Pourquoi Moulay Bousselham immobilier ?</h1>
                                         <div class="slide-brief animated">
                                             <p>Mettez en valeur votre bien immobilier via le
                                                 Digital. Gagnez en visibilité et en pertinence.</p>
@@ -67,8 +67,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="slide-item-img slide-img-left">
-                                    <img src="img/Moulaybousselham.jpg" alt="#">
+                                <div class="slide-item-img ">
+                                    <img src="img/imoo.png" alt="#">
                                 </div>
                             </div>
                         </div>
@@ -156,11 +156,11 @@
 
                             <div class="ltn__video-img ltn__animation-pulse1">
                                 <img src="img/others/8.png" alt="video popup bg image">
-                                <a class="ltn__video-icon-2 ltn__video-icon-2-border---"
+                                {{-- <a class="ltn__video-icon-2 ltn__video-icon-2-border---"
                                     href="https://www.youtube.com/embed/X7R-q9rsrtU?autoplay=1&amp;showinfo=0"
                                     data-rel="lightcase:myCollection">
                                     <i class="fa fa-play"></i>
-                                </a>
+                                </a> --}}
                             </div>
                         </div>
                     </div>
@@ -290,9 +290,10 @@
     </div>
     <!-- PRODUCT SLIDER AREA END -->
    <!-- CATEGORY AREA START -->
-   <div class="ltn__category-area section-bg-1-- ltn__primary-bg before-bg-1 bg-image bg-overlay-theme-black-5--0 pt-115 pb-90"
-   data-bs-bg="img/activities/capt.jpeg">
-   <div class="container">
+   <div class="ltn__category-area section-bg-1-- ltn__primary-bg  bg-image bg-overlay-theme-black-5--0 pt-115 pb-90"
+   data-bs-bg="img/activities/immmo.png" >
+   <div class="container" style="position: relative;
+                                bottom: -257px;">
        <div class="row">
            <div class="col-lg-12">
                <div class="section-title-area ltn__section-title-2 text-center">
@@ -305,7 +306,7 @@
                <div class="ltn__category-item ltn__category-item-4 text-center">
                    <div class="ltn__category-item-img">
                        <a href="#">
-                           <img src="img/activities/Kayak.jfif     " alt="" srcset="">
+                           <img src="img/activities/Kayak.jfif" alt="" srcset="">
                        </a>
                    </div>
                    <div class="ltn__category-item-name">
@@ -415,7 +416,7 @@
                        </a>
                    </div>
                    <div class="ltn__category-item-name">
-                       <h4><a href="#">GROUPES DE MUSICIENS <br> "sur DEMANDE"</a></h4>
+                       <h6><a href="#" title="sur DEMANDE" >GROUPES DE MUSICIENS </a></h6>
                    </div>
                    <div class="ltn__category-item-btn">
                        <a href="#"><i class="flaticon-right-arrow"></i></a>
