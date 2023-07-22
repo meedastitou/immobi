@@ -5,7 +5,7 @@
     <div class="ltn__slider-area ltn__slider-3  section-bg-1">
         <div class="ltn__slide-one-active slick-slide-arrow-1 slick-slide-dots-1">
             <!-- ltn__slide-item --> 
-            <div class="ltn__slide-item ltn__slide-item-2 ltn__slide-item-3-normal ltn__slide-item-3">
+            <div class="ltn__slide-item ltn__slide-item-2 ltn__slide-item-3-normal ltn__slide-item-3" id="sld">
                 <div class="ltn__slide-item-inner">
                     <div class="container">
                         <div class="row">
@@ -46,7 +46,7 @@
                 </div>
             </div>
             <!-- ltn__slide-item -->
-            <div class="ltn__slide-item ltn__slide-item-2 ltn__slide-item-3-normal ltn__slide-item-3">
+            <div class="ltn__slide-item ltn__slide-item-2 ltn__slide-item-3-normal ltn__slide-item-3" id="sld2">
                 <div class="ltn__slide-item-inner ">
                     <div class="container">
                         <div class="row">
@@ -146,23 +146,23 @@
     <!-- CAR DEALER FORM AREA END -->
 
     <!-- ABOUT US AREA START -->
-    <div class="ltn__about-us-area pt-120 pb-90 ">
+    <div class="ltn__about-us-area pt-100 pb-90 ">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 align-self-center">
                     <div class="about-us-img-wrap about-img-left">
-                        <img src="img/others/7.png" alt="About Us Image">
-                        <div class="about-us-img-info about-us-img-info-2 about-us-img-info-3">
+                        <img src="img/iimoo.png" alt="About Us Image">
+                        {{-- <div class="about-us-img-info about-us-img-info-2 about-us-img-info-3"> --}}
 
-                            <div class="ltn__video-img ltn__animation-pulse1">
+                            {{-- <div class="ltn__video-img ltn__animation-pulse1">
                                 <img src="img/others/8.png" alt="video popup bg image">
-                                {{-- <a class="ltn__video-icon-2 ltn__video-icon-2-border---"
+                                <a class="ltn__video-icon-2 ltn__video-icon-2-border---"
                                     href="https://www.youtube.com/embed/X7R-q9rsrtU?autoplay=1&amp;showinfo=0"
                                     data-rel="lightcase:myCollection">
                                     <i class="fa fa-play"></i>
-                                </a> --}}
-                            </div>
-                        </div>
+                                </a>
+                            </div> --}}
+                        {{-- </div> --}}
                     </div>
                 </div>
                 <div class="col-lg-6 align-self-center">
@@ -207,7 +207,7 @@
     </div>
     <!-- ABOUT US AREA END -->
     <!-- PRODUCT SLIDER AREA START -->
-    <div class="ltn__product-slider-area ltn__product-gutter pt-115 pb-90 plr--7">
+    <div class="ltn__product-slider-area ltn__product-gutter plr--7">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
@@ -291,145 +291,147 @@
     <!-- PRODUCT SLIDER AREA END -->
    <!-- CATEGORY AREA START -->
    <div class="ltn__category-area section-bg-1-- ltn__primary-bg  bg-image bg-overlay-theme-black-5--0 pt-115 pb-90"
-   data-bs-bg="img/activities/immmo.png" >
-   <div class="container" style="position: relative;
-                                bottom: -257px;">
-       <div class="row">
-           <div class="col-lg-12">
-               <div class="section-title-area ltn__section-title-2 text-center">
-                   <h1 class="section-title white-color">Les Activités a Faire ...</h1>
-               </div>
-           </div>
-       </div>
-       <div class="row ltn__category-slider-active slick-arrow-1">
-           <div class="col-12">
-               <div class="ltn__category-item ltn__category-item-4 text-center">
-                   <div class="ltn__category-item-img">
-                       <a href="#">
-                           <img src="img/activities/Kayak.jfif" alt="" srcset="">
-                       </a>
-                   </div>
-                   <div class="ltn__category-item-name">
-                       <h4><a href="#">KAYAK</a></h4>
-                   </div>
-                   <div class="ltn__category-item-btn">
-                       <a href="#"><i class="flaticon-right-arrow"></i></a>
-                   </div>
-               </div>
-
-           </div>
-           <div class="col-12">
-               <div class="ltn__category-item ltn__category-item-4 text-center">
-                   <div class="ltn__category-item-img">
-                       <a href="#">
-                           <img src="img/activities/BALADE EN BATEAU.jpg" alt="" srcset="">
-                       </a>
-                   </div>
-                   <div class="ltn__category-item-name">
-                       <h4><a href="#">BALADE EN BATEAU</a></h4>
-                   </div>
-                   <div class="ltn__category-item-btn">
-                       <a href="#"><i class="flaticon-right-arrow"></i></a>
-                   </div>
-               </div>
-           </div>
-           <div class="col-12">
-               <div class="ltn__category-item ltn__category-item-4 text-center">
-                   <div class="ltn__category-item-img">
-                       <a href="#">
-                           <img src="img/activities/SORTE DE PECHE.jpg" alt="" srcset="">
-                       </a>
-                   </div>
-                   <div class="ltn__category-item-name">
-                       <h4><a href="#">SORTiE DE PECHE</a></h4>
-                   </div>
-                   <div class="ltn__category-item-btn">
-                       <a href="#"><i class="flaticon-right-arrow"></i></a>
-                   </div>
-               </div>
-           </div>
-           <div class="col-12">
-               <div class="ltn__category-item ltn__category-item-4 text-center">
-                   <div class="ltn__category-item-img">
-                       <a href="#">
-                           <img src="img/activities/SORTIE EN QUAD.jpg" alt="" srcset="">
-                       </a>
-                   </div>
-                   <div class="ltn__category-item-name">
-                       <h4><a href="#">SORTIE EN QUAD</a></h4>
-                   </div>
-                   <div class="ltn__category-item-btn">
-                       <a href="#"><i class="flaticon-right-arrow"></i></a>
-                   </div>
-               </div>
-           </div>
-           <div class="col-12">
-               <div class="ltn__category-item ltn__category-item-4 text-center">
-                   <div class="ltn__category-item-img">
-                       <a href="#">
-                           <img src="img/activities/ACTIVITE NAUTIQUE.jpg" alt="" srcset="">
-                       </a>
-                   </div>
-                   <div class="ltn__category-item-name">
-                       <h4><a href="#">ACTIVITE NAUTIQUE</a></h4>
-                   </div>
-                   <div class="ltn__category-item-btn">
-                       <a href="#"><i class="flaticon-right-arrow"></i></a>
-                   </div>
-               </div>
-           </div>
-           <div class="col-12">
-               <div class="ltn__category-item ltn__category-item-4 text-center">
-                   <div class="ltn__category-item-img">
-                       <a href="#">
-                           <img src="img/activities/PARAPENT.jpg" alt="" srcset="">
-                       </a>
-                   </div>
-                   <div class="ltn__category-item-name">
-                       <h4><a href="#">PARAPENT</a></h4>
-                   </div>
-                   <div class="ltn__category-item-btn">
-                       <a href="#"><i class="flaticon-right-arrow"></i></a>
-                   </div>
-               </div>
-           </div>
-           <div class="col-12">
-               <div class="ltn__category-item ltn__category-item-4 text-center">
-                   <div class="ltn__category-item-img">
-                       <a href="#">
-                           <img src="img/activities/STAGE DE YOGA.jpg" alt="" srcset="">
-                       </a>
-                   </div>
-                   <div class="ltn__category-item-name">
-                       <h4><a href="#">STAGE DE YOGA</a></h4>
-                   </div>
-                   <div class="ltn__category-item-btn">
-                       <a href="#"><i class="flaticon-right-arrow"></i></a>
-                   </div>
-               </div>
-           </div>
-           <div class="col-12">
-               <div class="ltn__category-item ltn__category-item-4 text-center">
-                   <div class="ltn__category-item-img">
-                       <a href="#">
-                           <img src="img/activities/GROUPES DE MUSICIENS.jpg" alt="" srcset="">
-                       </a>
-                   </div>
-                   <div class="ltn__category-item-name">
-                       <h6><a href="#" title="sur DEMANDE" >GROUPES DE MUSICIENS </a></h6>
-                   </div>
-                   <div class="ltn__category-item-btn">
-                       <a href="#"><i class="flaticon-right-arrow"></i></a>
-                   </div>
-               </div>
-           </div>
-       </div>
+        data-bs-bg="img/activities/immmo.png" style="height: 500px" >
    </div>
-</div>
+        {{-- <div class="container " > --}}
+
+    
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="text-center">
+                    <h1 class="section-title titile-activites">Les Activités a Faire ...</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row ltn__category-slider-active slick-arrow-1 ">
+            <div class="col-12">
+                <div class="ltn__category-item ltn__category-item-4 text-center">
+                    <div class="ltn__category-item-img">
+                        <a href="#">
+                            <img src="img/activities/Kayak.jfif" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="ltn__category-item-name">
+                        <h4><a href="#">KAYAK</a></h4>
+                    </div>
+                    <div class="ltn__category-item-btn">
+                        <a href="#"><i class="flaticon-right-arrow"></i></a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-12">
+                <div class="ltn__category-item ltn__category-item-4 text-center">
+                    <div class="ltn__category-item-img">
+                        <a href="#">
+                            <img src="img/activities/BALADE EN BATEAU.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="ltn__category-item-name">
+                        <h4><a href="#">BALADE EN BATEAU</a></h4>
+                    </div>
+                    <div class="ltn__category-item-btn">
+                        <a href="#"><i class="flaticon-right-arrow"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="ltn__category-item ltn__category-item-4 text-center">
+                    <div class="ltn__category-item-img">
+                        <a href="#">
+                            <img src="img/activities/SORTE DE PECHE.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="ltn__category-item-name">
+                        <h4><a href="#">SORTiE DE PECHE</a></h4>
+                    </div>
+                    <div class="ltn__category-item-btn">
+                        <a href="#"><i class="flaticon-right-arrow"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="ltn__category-item ltn__category-item-4 text-center">
+                    <div class="ltn__category-item-img">
+                        <a href="#">
+                            <img src="img/activities/SORTIE EN QUAD.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="ltn__category-item-name">
+                        <h4><a href="#">SORTIE EN QUAD</a></h4>
+                    </div>
+                    <div class="ltn__category-item-btn">
+                        <a href="#"><i class="flaticon-right-arrow"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="ltn__category-item ltn__category-item-4 text-center">
+                    <div class="ltn__category-item-img">
+                        <a href="#">
+                            <img src="img/activities/ACTIVITE NAUTIQUE.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="ltn__category-item-name">
+                        <h4><a href="#">ACTIVITE NAUTIQUE</a></h4>
+                    </div>
+                    <div class="ltn__category-item-btn">
+                        <a href="#"><i class="flaticon-right-arrow"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="ltn__category-item ltn__category-item-4 text-center">
+                    <div class="ltn__category-item-img">
+                        <a href="#">
+                            <img src="img/activities/PARAPENT.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="ltn__category-item-name">
+                        <h4><a href="#">PARAPENT</a></h4>
+                    </div>
+                    <div class="ltn__category-item-btn">
+                        <a href="#"><i class="flaticon-right-arrow"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="ltn__category-item ltn__category-item-4 text-center">
+                    <div class="ltn__category-item-img">
+                        <a href="#">
+                            <img src="img/activities/STAGE DE YOGA.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="ltn__category-item-name">
+                        <h4><a href="#">STAGE DE YOGA</a></h4>
+                    </div>
+                    <div class="ltn__category-item-btn">
+                        <a href="#"><i class="flaticon-right-arrow"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="ltn__category-item ltn__category-item-4 text-center">
+                    <div class="ltn__category-item-img">
+                        <a href="#">
+                            <img src="img/activities/GROUPES DE MUSICIENS.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="ltn__category-item-name">
+                        <h6><a href="#" title="sur DEMANDE" >GROUPES DE MUSICIENS </a></h6>
+                    </div>
+                    <div class="ltn__category-item-btn">
+                        <a href="#"><i class="flaticon-right-arrow"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{-- </div> --}}
+{{-- </div> --}}
 <!-- CATEGORY AREA END -->
 
     <!-- FEATURE AREA START ( Feature - 6) -->
-    <div class="ltn__feature-area section-bg-1 pt-120 pb-90 mb-120---">
+    <div class="ltn__feature-area section-bg-1 pt-70 pb-90 mb-120---">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">

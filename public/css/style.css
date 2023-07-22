@@ -19494,3 +19494,18 @@ ul.pagination li:last-child a{
   /* border-radius: 40px; */
   margin: 0 auto;
 }
+div#sld {
+  top: -70px !important;
+}
+div#sld2 {
+  top: -70px !important;
+}
+.titile-activites{
+  font-size: 36px;
+    padding: 20px 10px;
+    display: inline-block;
+    white-space: nowrap;
+    color: var(--ltn__heading-color);
+    font-weight: 600;
+    font-family: var(--ltn__body-font);
+}
